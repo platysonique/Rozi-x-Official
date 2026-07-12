@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rozi X Official — Platysonique</title>
+    <meta
+      name="description"
+      content="Official Rozi X MECCA public site by Platysonique — Architecture Voyage and Official Documentation on separate pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #070b16;
+        --text: #eef4ff;
+        --muted: #9eb0d4;
+        --accent: #3dfff3;
+        --accent-2: #ff7a59;
+        --card: rgba(18, 26, 46, 0.84);
+        --line: #2a3a5c;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(900px 500px at 15% 0%, #1b2b4d 0%, transparent 55%),
+          radial-gradient(700px 420px at 90% 20%, #2a1830 0%, transparent 50%),
+          var(--bg);
+      }
+      .wrap {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 4.5rem 1.25rem 3rem;
+      }
+      .eyebrow {
+        margin: 0 0 0.6rem;
+        color: var(--accent);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+      h1 {
+        margin: 0;
+        font-family: Orbitron, sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        letter-spacing: 0.04em;
+      }
+      .lede {
+        margin: 1rem 0 2.2rem;
+        max-width: 40rem;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.6;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      a.card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 1.35rem 1.25rem 1.4rem;
+        transition: border-color 0.15s ease, transform 0.15s ease;
+      }
+      a.card:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+      a.card h2 {
+        margin: 0 0 0.55rem;
+        font-family: Orbitron, sans-serif;
+        font-size: 1.05rem;
+        letter-spacing: 0.03em;
+      }
+      a.card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+        font-size: 0.98rem;
+      }
+      a.card .go {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      a.card.docs .go {
+        color: var(--accent-2);
+      }
+      footer {
+        margin-top: 2.5rem;
+        color: #7f91b5;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="eyebrow">Platysonique</p>
+      <h1>Rozi X Official</h1>
+      <p class="lede">
+        Public home for Rozi X MECCA. The interactive Architecture Voyage and the
+        Official Documentation live on separate pages — pick where you want to go.
+      </p>
+      <div class="grid">
+        <a class="card" href="./voyage/">
+          <h2>Architecture Voyage</h2>
+          <p>
+            Interactive 3D tour of the live organism — concurrent lanes, shared
+            brain, operator vs autonomous motion.
+          </p>
+          <span class="go">Open voyage →</span>
+        </a>
+        <a class="card docs" href="./docs/">
+          <h2>Official Documentation</h2>
+          <p>
+            Architecture overview, claim boundaries, and investor-facing technical
+            handoff — on its own page, not mixed into the voyage.
+          </p>
+          <span class="go">Read documentation →</span>
+        </a>
+      </div>
+      <footer>Platysonique · Rozi X MECCA</footer>
+    </div>
+  </body>
+</html>
