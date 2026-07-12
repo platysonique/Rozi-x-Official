@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-CmQPImPJ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B6jpHewA.css">
+    <script type="module" crossorigin src="./assets/index-DnOXiSl6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cx38cwun.css">
   </head>
   <body>
     <div id="app">
@@ -58,16 +58,18 @@
           <p class="hint">Drag to orbit anytime (even mid-voyage) · scroll to zoom · click a node for its role</p>
         </footer>
       </aside>
-      <main id="stage" aria-label="3D architecture graph"></main>
-      <aside id="movement-explainer" class="movement-explainer" aria-live="polite">
-        <p class="explainer-kicker">Rozi X Architecture</p>
-        <h2 id="explainer-title">Already alive</h2>
-        <p id="explainer-body">
-          Gold-pulsing parts are always-on. Pick Operator query or Autonomous action —
-          most demos run multiple colored lanes because the live app is concurrent.
-        </p>
-        <p id="explainer-step" class="explainer-step" hidden></p>
-      </aside>
+      <div id="stage-wrap">
+        <main id="stage" aria-label="3D architecture graph"></main>
+        <aside id="movement-explainer" class="movement-explainer" aria-live="polite">
+          <p class="explainer-kicker">Rozi X Architecture</p>
+          <h2 id="explainer-title">Already alive</h2>
+          <p id="explainer-body">
+            Gold-pulsing parts are always-on. Pick Operator query or Autonomous action —
+            most demos run multiple colored lanes because the live app is concurrent.
+          </p>
+          <p id="explainer-step" class="explainer-step" hidden></p>
+        </aside>
+      </div>
       <div id="node-tooltip" hidden></div>
     </div>
   </body>
