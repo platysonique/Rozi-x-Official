@@ -20,6 +20,10 @@
 
 ## Abstract
 
+**In one line:** Rozi is an AI assistant you can actually trust to do the thing — because it refuses to say "done" until it has checked that the thing really happened.
+
+Most assistants will confidently report completion the moment a tool returns "okay," even when the real world never changed. Rozi X MECCA is built so that kind of false success is illegal by architecture: tools are actuators, not truth. Completion requires domain verification against reality — the difference between an employee who says "I handled it" and one who shows confirmation.
+
 Rozi X MECCA is a local-first cognitive substrate architecture for autonomous assistant organisms. It treats memory, intent, action, verification, settlement, and authority as parts of one outcome-grounded control system instead of separate chatbot features. The core thesis is that an assistant should not claim completion because a tool returned `success: true`, a scheduler fired, or an idempotency layer replayed a cached result. It should claim completion only when the relevant domain truth adapter verifies that the intended predicate is satisfied.
 
 MECCA means **Metabolic Evolutionary Contract Cognition Architecture**. It is the cognitive substrate. Rozi X is the target organism: owner-loyal, portable, local-first, authority-aware, and able to grow from verified experience. Kryptonite is the first large working body of the organism: a real exchange-connected trading workstation with event-driven data, ledger truth, capital controls, AI coordination, and autonomous operating laws.
@@ -31,6 +35,23 @@ This rule is universal, not tool-specific. A liquidation retry, a Telegram send,
 This architecture synthesizes established ideas: cybernetics, control theory, MAPE-K autonomic computing, Belief-Desire-Intention agents, OODA, Kubernetes-style reconciliation, desired-state configuration, runtime verification, proof-carrying code, sagas, event sourcing, proper scoring rules, Reflexion-style verbal reinforcement, skill libraries, and object-capability security. Its novelty is not that those fields were invented here. Its contribution is the unification of those mechanisms into a local-first assistant organism whose claims, memories, skills, and authority are settled against verified outcomes.
 
 The practical framing is simpler: **MECCA is the framework**. The model is a replaceable brain. The workflows — intent contracts, tool actuation under Guardian, domain verification, outcome envelopes, settlement, cognitive blackboard metabolism, and interruptible thought drafts — are what turn a capable language model into a disciplined assistant organism instead of a chat window that hopes the next token is enough.
+
+**Founder pull-quote (public):** *"I don't write the code. I decide what's true. The system enforces it because I refused to."* — Adonis Carcamo
+
+---
+
+## Why this matters in 2026 (public differentiation)
+
+False completion — agents asserting "done" when environment state disagrees — is an active research frontier in 2026. Labs publish verifiers, monitors, and behavioral contracts; much of that work still validates in simulation and treats verification as a bolt-on guardrail.
+
+Rozi X's public differentiators (honest, investor-safe):
+
+1. **Integrated organism, not a bolt-on verifier.** Verified-against-reality action is the operating metabolism, not a wrapper around a chat model.
+2. **Live financial proving ground.** The law was forged on an exchange-connected trading workstation where a fake "done" costs real money — then extended to operator workflows (mail, calendar, research, browser under warrant).
+3. **Multi-domain continuous operator surface** under one authority membrane, not a single-benchmark demo.
+4. **Safety and capability fused.** Verification is native law, not a "verifier tax" bolted on after fluent generation.
+
+This section does **not** include grant strategy, Phase I proposal coaching, or private operator runbooks. See the public investor site About page for the founder statement and feeling-first explainer.
 
 ---
 
