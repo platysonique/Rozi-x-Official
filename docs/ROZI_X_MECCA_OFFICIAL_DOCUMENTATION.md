@@ -2,17 +2,19 @@
 
 ## Document Status
 
-**What this document is:** The public architecture story for Rozi X MECCA — a living handoff for people who want to understand the project without reading the private codebase. It is written for builders, operators, and diligence readers.
+**Status:** official architecture overview and investor-facing technical handoff, grounded in current repository evidence, internal research, implemented substrate code, capability-organ implementation evidence, and live runtime proof where explicitly stated.
 
-**Living document:** This page is updated as the architecture develops. When new capabilities are implemented and ready to describe publicly, they are reflected here. Treat each refresh as a current snapshot of the public architecture narrative, not a one-time frozen brochure.
+**Audience:** builders, operators, and diligence readers. Plain-language capability examples appear in **What Rozi Can Do In Real Life**; architecture depth and claim boundaries remain intact elsewhere.
 
-**What it is for:** To explain what Rozi X MECCA is aiming to be, what already exists in working form, how the major pieces fit together, and where honest claim boundaries sit. Plain-language capability examples appear in **What Rozi Can Do In Real Life**; deeper architecture sections carry the technical shape.
+**Canonical rule:** this document describes the Rozi X MECCA architecture as it currently exists and as it is being hardened. It does not override verified code, proprietary internal truth records, or live runtime evidence.
 
-**How to use it:** Read it as orientation and evidence-backed overview. Later sections carry the substance. Where work is still in progress, this document says so rather than overselling.
+**Public-document scope:** implementation workflow, builder checklists, operator runbooks, and doc-update procedures are governed by proprietary internal manuals. This document presents architecture, current capabilities, public-safe evidence, investor-safe positioning, and claim boundaries.
 
-**Honest frame:** Rozi X MECCA is a serious local-first cognitive architecture under active construction. It should not be read as finished AGI, a sentient being, a certified safety framework, a guaranteed trading system, or a completed autonomous enterprise product.
+**MECCA non-substitution law:** no implementation may substitute prompt instructions, model judgment, tool success, scheduler dispatch, idempotency replay, cached state, hardcoded tool-name lists, or internal state-machine flags for substrate truth. Substrate truth requires the active intent, current authority, declared constraints, actuator result, domain verifier, Universal Outcome Envelope, and settlement path to agree. If one of those parts is missing, the feature is partial, not MECCA-complete.
 
-**Last public refresh:** 2026-07-11.
+**Boundary:** Rozi X MECCA must not be described as a finished artificial general intelligence, a sentient being, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or a proven first-ever scientific discovery. It is a serious local-first cognitive architecture under active construction, with implemented substrate pieces and remaining proof gates.
+
+**Last public refresh:** 2026-07-12.
 
 ---
 
@@ -418,7 +420,7 @@ The architecture has nine **substrate organs** that form the control loop, plus 
 **Capability organs (implemented):**
 
 10. Subject Image Enrichment (Research Sense Organ)
-11. Google Workspace Sense (DWD Gmail / Drive / Calendar)
+11. Google Workspace Sense (DWD Gmail / Drive / Calendar / Sheets / Docs / Slides / Contacts / Directory — gated universal actuator + method discovery)
 12. Operator Relay (Telegram text-cycle communication motor)
 13. Cursor Delegation (controlled build and research delegation — first specialist harness membrane)
 
@@ -465,7 +467,7 @@ Rozi X MECCA is presented here as a working architecture and capability suite. T
 
 **Interrupted thoughts do not die.** When the operator hits Stop, or sends a second message while Rozi is still answering (barge-in), the incomplete generation is **sealed as a Thought draft** on the blackboard — a first-class cognitive object with interrupt class, partial text, and session identity. That is not “abort and forget.” Rozi can list open drafts, redirect them (addition / revision / retraction / resume), or settle them. The draft never mints write authority: thinking continuity is not motor permission. Recovery-quality scoring and accept/reject credit metabolism remain active research; the seal → redirect → settle substrate is implemented and operator-visible.
 
-**Google Workspace.** When configured, Rozi can read Gmail, Drive, and Calendar through a fixed Workspace delegation setup. Writes exist as a serious gated power, not an ambient permission. The generic Workspace actuator can reach Gmail, Drive, and Calendar methods, but every mutation still requires the correct service toggle, warrant, Guardian authorization, idempotency, and live proof before Rozi may claim that the external state changed.
+**Google Workspace.** When configured, Rozi can read and write across the owner's scoped Google services through a fixed Workspace delegation setup (Gmail, Drive, Calendar, Sheets, Docs, Slides, Contacts, and Directory when scoped). Dedicated read tools cover everyday Gmail/Drive/Calendar inspection. A **method-discovery** surface lets her browse the live Google discovery catalog (`list_workspace_methods` / `describe_workspace_method`) before calling the generic actuator — she must not invent dotted API paths. The generic `workspace_call` actuator can reach any method on any configured service, but every mutation still requires the master write warrant, Guardian authorization, idempotency, and live proof before Rozi may claim that the external state changed. High-risk Directory/admin mutations remain denylisted until explicitly armed.
 
 **Operator communication.** Rozi can communicate through desktop chat and Telegram, open a reply cycle when an answer is needed, and connect remote replies back to the local conversation. Delivery hardening includes progress signals during long tool loops, injecting results into the active channel/session, and cross-channel escalation so a desktop blocking question can reach the founder on Telegram when configured. Operator Relay stores outbound and inbound text cycles, correlates replies, and settles outcomes through warrants and label-aware scoring. Proactive notifications remain controlled by operator settings; necessary operator escalation is a separate authority path.
 
@@ -552,7 +554,7 @@ When the operator authorizes a concrete multi-step trade plan, the organism shou
 
 #### 5. “Check my email / put this on the calendar”
 
-With Workspace configured, Rozi can read mail, Drive, and Calendar. Writes are possible but **gated**: toggles, warrants, Guardian, idempotency, and live proof. She should not claim “it’s on the calendar” because a tool returned OK unless the domain proof supports that claim.
+With Workspace configured, Rozi can read mail, Drive, and Calendar, and can reach other scoped Google services (Sheets, Docs, and similar) through the gated universal actuator. When she does not already know the exact API method path, she is expected to **browse the discovery catalog** first, then act — not invent method names. Writes are possible but **gated**: master write warrant, Guardian, idempotency, and live proof. She should not claim “it’s on the calendar” because a tool returned OK unless the domain proof supports that claim.
 
 #### 6. Use the browser you’re already logged into
 
@@ -589,7 +591,7 @@ After rapid restarts or odd health signals, Rozi can form a structured concern d
 Rozi X MECCA is under active construction. Capability claims must distinguish policy, implemented substrate, runtime proof, and remaining proof gates:
 
 - Rozi is not AGI, sentient, provably safe, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or proven first-ever science.
-- Google Workspace writes are implemented as a gated actuator surface. A specific Gmail, Calendar, or Drive mutation is only complete when the tool result and live domain proof support that specific claim.
+- Google Workspace writes are implemented as a gated universal actuator surface (not ambient permission). Method discovery browses the catalog but does not authorize mutation. A specific Gmail, Calendar, Drive, Sheets, or other scoped mutation is only complete when the tool result and live domain proof support that specific claim.
 - Full autonomous multi-step orchestration is not live. The workflow substrate is present and `orchestration.enabled` defaults OFF; post-restart scheduled-task dispatch is real, but it is not the same as a shipped orchestration worker.
 - Rozi is **not** a Perplexity Computer clone and does **not** claim twenty simultaneous frontier models. Parallelism comes from async jobs, specialist harnesses, and event-driven metabolism — under resource honesty.
 - Claude Code and VS Code IDE membranes are **integration targets**, not shipped organs, until code + probe exist. Organ 13 Cursor is the live reference pattern.
@@ -906,16 +908,17 @@ Verification evidence:
 
 ## Organ 11: Google Workspace Sense (Track B)
 
-Google Workspace Sense is the second specialized **capability organ**. It reads the owner's Gmail, Drive, and Calendar via **Domain-Wide Delegation (DWD)** — impersonating a fixed Workspace user configured in Settings, never from LLM tool arguments.
+Google Workspace Sense is the second specialized **capability organ**. It accesses the owner's Google Workspace via **Domain-Wide Delegation (DWD)** — impersonating a fixed Workspace user configured in Settings, never from LLM tool arguments. Everyday read tools cover Gmail, Drive, and Calendar. A **universal actuator** (`workspace_call`) reaches any method on any scoped service the credential already authorizes (including Sheets, Docs, Slides, Contacts, and Directory when scoped). A **method-discovery** pair (`list_workspace_methods` / `describe_workspace_method`) walks the live Google discovery document so Rozi can browse exact dotted paths and parameters — the Workspace analogue of trading's `list_trading_engine_methods` — before actuating.
 
 Hard rules:
 
 1. **Separate from Organ 10.** Public image verification and private Workspace access use separate credential tracks. Different service accounts, keyring keys, scopes, and tool groups prevent cross-contamination.
-2. **Substrate enforcement, not prompt-only.** `google_workspace_gates.py` blocks autonomous/heartbeat contexts, missing credentials, disabled organ, and private-content reads without warrant.
+2. **Substrate enforcement, not prompt-only.** `google_workspace_gates.py` blocks unsupervised heartbeat contexts, missing credentials, disabled organ, and private-content reads without warrant.
 3. **Impersonation is fixed.** `get_impersonate_user()` reads config/keyring only — tools cannot pass a different mailbox.
 4. **Metadata vs private content.** Headers and file listings are Phase 1 defaults. `gmail_read_message_body` and `drive_export_file` require `google_workspace.private_content_warrant`.
-5. **No autonomous Workspace reads.** `GOOGLE_WORKSPACE_TOOLS` are denied in `rabbid_hare_autonomous` and `autonomous_heartbeat`.
+5. **No unsupervised heartbeat Workspace tools.** Interactive chat may use the organ; background heartbeat runs are denied for catalog and read surfaces (the gated actuator remains subject to the same organ enablement and write gates).
 6. **Structured outcomes.** Every tool returns the universal Workspace envelope via `google_workspace_outcome.py` and `_workspace_tool_dispatch`.
+7. **Discovery is not actuation.** Listing or describing a method never mutates Google state and never authorizes a write.
 
 Outcome contract:
 
@@ -932,27 +935,31 @@ Implemented surface:
 
 | Layer | Path / symbol |
 | --- | --- |
-| Auth factory | `services/google_workspace_auth.py` — `WORKSPACE_DWD_SCOPES`, `get_dwd_credentials`, lazy `build_*_service` |
+| Auth factory | `services/google_workspace_auth.py` — service registry, DWD credentials, lazy builders |
 | Errors | `services/google_workspace_errors.py` — HttpError → actionable codes |
 | Gates | `services/google_workspace_gates.py` — `gate_workspace_tool` |
 | Outcomes | `services/google_workspace_outcome.py` — `workspace_result`, envelope attach |
-| Audit | `services/google_workspace_audit.py` — append-only `audit/google_workspace_audit.jsonl` |
+| Audit | `services/google_workspace_audit.py` — append-only Workspace audit log |
+| Discovery | `services/google_workspace_discovery.py` — discovery-document catalog walk |
+| Actuator | `services/google_workspace_actuator.py` — gated universal `workspace_call` |
 | Gmail | `services/google_workspace_gmail.py` |
 | Drive | `services/google_workspace_drive.py` |
 | Calendar | `services/google_workspace_calendar.py` |
-| Health | `services/google_workspace_health.py` — `workspace_probe_credentials_impl` (Settings test) |
-| Tools | `services/tool_registry.py` — `google_workspace` TOOL_GROUP (9 tools, including gated `workspace_call`) |
+| Health | `services/google_workspace_health.py` — credential probe (Settings test) |
+| Tools | `services/tool_registry.py` — `google_workspace` TOOL_GROUP (11 tools, including discovery + gated `workspace_call`) |
 | Config | `infra/config_manager.py` — `google_workspace.*` defaults |
-| Settings | `ui/panels/settings_panel.py` — Tab 3 DWD group + Test Connection |
+| Settings | `ui/panels/settings_panel.py` — DWD group + Test Connection |
 | Prompts | `config/prompt_modules/ref_google_workspace.txt`, `tool_navigation.txt`, `main_ai_identity.txt` |
 | Operator + pitfalls | Maintained in proprietary operator runbooks; public documentation states architecture and proof boundaries only |
-| Bootstrap | `scripts/bootstrap_organ11_workspace.py` (key + config + probe; uses `.json.tmp` — never leaves empty key file) |
+| Bootstrap | Controlled internal bootstrap scripts (key + config + probe; never leave empty key files) |
 
-Tools (read surface + gated generic actuator):
+Tools (read surface + discovery + gated generic actuator):
 
 | Tool | Purpose |
 | --- | --- |
 | `workspace_health_check` | Operational gate when organ enabled |
+| `list_workspace_methods` | Browse supported services or discovery method catalog (optional query filter) |
+| `describe_workspace_method` | Parameter / HTTP-verb detail for one dotted method path |
 | `gmail_search_messages` | Search inbox; returns ids for metadata/body tools |
 | `gmail_get_message_metadata` | Headers without body |
 | `gmail_read_message_body` | Full body — **requires private content warrant** |
@@ -960,7 +967,7 @@ Tools (read surface + gated generic actuator):
 | `drive_get_file_metadata` | File metadata |
 | `drive_export_file` | Export Doc/Sheet content — **requires warrant** |
 | `calendar_list_events` | Upcoming events |
-| `workspace_call` | Generic Gmail/Drive/Calendar API actuator; writes require per-service toggles, master write warrant, Guardian authorization, idempotency, and live proof before completion is claimed |
+| `workspace_call` | Generic actuator for any scoped Google service method; writes require master write warrant, Guardian authorization, idempotency, and live proof before completion is claimed |
 
 Operational footprint:
 
@@ -970,20 +977,21 @@ Organ wiring:
 
 ```text
 User intent -> gate_workspace_tool -> _workspace_tool_dispatch
-  -> build_*_service (DWD impersonating fixed user)
-  -> execute_google_api (HttpError mapped)
-  -> workspace_result envelope + audit jsonl
+  -> (discovery) list/describe from discovery document  OR
+  -> (actuator) build service + resolve dotted method + execute_google_api
+  -> workspace_result envelope + audit
   -> Reads settle from returned data; writes require explicit tool result plus domain proof
 ```
 
 Verification evidence:
 
-- `tests/test_google_workspace.py` — **6 passed**, 1 skipped (live integration)
-- Live probe (`workspace_probe_credentials_impl`) — Gmail `users.messages.list` against impersonated inbox; returns `ok: true` when DWD + APIs + key are correct
+- Focused Workspace / actuator / discovery unit suites under the project virtualenv (mocked externals)
+- Live discovery smoke when DWD is configured: service catalog + method describe for known paths
+- Live credential probe (`workspace_probe_credentials_impl`) — Gmail list against impersonated inbox when DWD + APIs + key are correct
 
-Write boundary: Gmail send, Calendar create, Drive mutations, and other Workspace methods flow through `workspace_call`; availability does not prove mutation. Each write still needs the configured toggle/warrant/Guardian gates and live proof for the specific mutation before Rozi may claim completion.
+Write boundary: Gmail send, Calendar create, Drive mutations, Sheets/Docs writes, and other Workspace methods flow through `workspace_call`; availability does not prove mutation. Discovery tools never write. Each mutation still needs the master write warrant / Guardian gates and live proof for the specific mutation before Rozi may claim completion.
 
-**Build pattern:** Organ 11 is the reference template for authenticated external-API capability organs (DWD/auth factory + dedicated TOOL_GROUP + health probe). Delivery follows proprietary internal build procedures before operational claims are made.
+**Build pattern:** Organ 11 is the reference template for authenticated external-API capability organs (DWD/auth factory + dedicated TOOL_GROUP + health probe + discovery + universal actuator). Delivery follows proprietary internal build procedures before operational claims are made.
 
 ---
 
@@ -1043,7 +1051,7 @@ No verified predicate, no final completion claim.
 
 ## Implemented Evidence
 
-As of the 2026-07-11 documentation refresh, the following public-safe implementation evidence exists. Focused suite counts below are historical snapshots from organ delivery; the live branch collects on the order of **~1145** tests — re-run the suite for current pass totals.
+As of the 2026-07-12 documentation refresh, the following public-safe implementation evidence exists. Focused suite counts below are historical snapshots from organ delivery; the live branch collects on the order of **~1100+** tests — re-run the suite for current pass totals.
 
 | Area | Evidence |
 | --- | --- |
@@ -1054,7 +1062,7 @@ As of the 2026-07-11 documentation refresh, the following public-safe implementa
 | Outcome hardening | `services/outcome_envelope.py` no longer maps idempotency replay or duplicate suppression to `reconciled` without verifier truth; remaining-gap honesty hardened so API `ok` is not automatic mission-complete. |
 | Settlement path | `services/warrant_hooks.py` and `services/reckoner.py` consume verified outcome envelopes for credit/confidence updates. |
 | Subject Image Enrichment (Organ 10) | `services/image_enrichment.py` plus KG/Vision clients; `find_subject_image` / `reveal_ambiguous_gallery` in `memory_market`; ENRICHMENT warrants; `ref_image_enrichment.txt`; focused enrichment tests. |
-| Google Workspace Sense (Organ 11) | `services/google_workspace_*.py` (auth, gates, errors, outcome, audit, gmail, drive, calendar, health); tools in `google_workspace` TOOL_GROUP including gated `workspace_call`; Settings DWD group; prompt discoverability; live DWD probe when operator setup is complete. |
+| Google Workspace Sense (Organ 11) | `services/google_workspace_*.py` (auth, gates, errors, outcome, audit, gmail, drive, calendar, health, discovery, actuator); tools in `google_workspace` TOOL_GROUP including `list_workspace_methods` / `describe_workspace_method` and gated `workspace_call`; Settings DWD group; prompt discoverability; live DWD / discovery smoke when operator setup is complete. |
 | Remote operator (Telegram + terminal) | `services/telegram_bot.py` (chat UI parity), `services/chat_delivery.py`, `services/operator_escalation.py`, `services/terminal_access.py`; tools `set_terminal_full_access`, `request_operator_input`; progress / session inject / cross-channel escalation substrate; prompt discoverability and proprietary architecture manuals preserve the private operating rules. |
 | Operator Relay (Organ 12) | `services/telegram_outbound.py`, `services/operator_relay_store.py` (text cycles as intent jobs, label-aware Brier settlement), `services/operator_relay_router.py` + classifier; tool `send_message_to_operator` (+ kernel `settle_relay_cycle`); RELAY_CORRELATION warrants; prompt surfaces. |
 | Cursor Delegation (Organ 13) | `services/cursor_delegation_runner.py` (cursor-agent CLI membrane, worktree-locked builds, never auto-merge), `services/cursor_delegation_store.py` (cycles as intent jobs, DELEGATION_OUTCOME Brier settlement, orphan sweep); tools `delegate_to_cursor_agent` / `get_delegation_status` (+ kernel `settle_cursor_delegation`); autonomous launches gated by `cursor_delegation.autonomous_enabled` Settings toggle; prompt surfaces and proprietary build manuals preserve the private delegation rules. |
@@ -1072,10 +1080,10 @@ As of the 2026-07-11 documentation refresh, the following public-safe implementa
 
 Verification evidence:
 
-- Organ-focused suites historically green at delivery (reconciliation, enrichment, Workspace, restart, tool-status, Cursor delegation, cognition blackboard/attention).
-- Latest collection snapshot (2026-07-11): **1145** tests collected across **142** test files — re-run for current pass/fail.
+- Organ-focused suites historically green at delivery (reconciliation, enrichment, Workspace, discovery, restart, tool-status, Cursor delegation, cognition blackboard/attention).
+- Latest collection snapshot (2026-07-11): **1145** tests collected across **142** test files — re-run for current pass/fail; Workspace discovery unit suite green at 2026-07-12 delivery.
 - Six-track focused suite (2026-07-11): recent executions, trade plan, operator memory, Telegram delivery, browser bridge, tool authority, and tool-loop paths exercised in unit tests under the project virtualenv.
-- Organ 11 live probe: Gmail list via configured DWD impersonation — `ok: true` when DWD + APIs + key are configured.
+- Organ 11 live probe: Gmail list via configured DWD impersonation — `ok: true` when DWD + APIs + key are configured; method discovery smoke returns service catalog and describe rows for known paths when the same credential path is healthy.
 - Cognition E2E proofs recorded in internal research logs: async job → narrated interjection; attention propose → enqueue → interject; Stop/barge-in → Thought draft seal with redirect/settle tools available to MAIN; organism concern digest + boot speak quiet-on-repeat fingerprint; no canned boot concern scripts.
 
 ---
@@ -1222,15 +1230,15 @@ Do not claim:
 - MECCA has completed weight-learning, self-modifying code, or fully autonomous skill evolution.
 - The Guardian fully solves alignment, corrigibility, sycophancy, or off-switch games.
 - Every domain has complete verifier coverage.
-- A Workspace mutation happened merely because `workspace_call` was available, dispatched, or accepted. Each Gmail/Calendar/Drive write claim needs the write tool result plus the relevant live domain proof.
-- Rozi has full Workspace admin powers (device wipe, user provisioning). Organ 11 is fixed-scope DWD access through the configured impersonated user, with read surfaces and gated generic writes, not arbitrary admin authority.
+- A Workspace mutation happened merely because `workspace_call` was available, dispatched, or accepted — or merely because a method appeared in the discovery catalog. Each write claim needs the write tool result plus the relevant live domain proof.
+- Rozi has full Workspace admin powers (device wipe, user provisioning). Organ 11 is fixed-scope DWD access through the configured impersonated user, with read surfaces, discovery catalog tools, and gated generic writes, not arbitrary admin authority.
 
 Safe claims:
 
 - Rozi X MECCA has a concrete architecture and code-backed substrate pieces.
 - Phase 9 implemented verified desired-state reconciliation for scheduled intent.
 - Subject Image Enrichment is implemented as Organ 10 — a read-only research-sense capability organ with structured found/ambiguous/not_found outcomes.
-- Google Workspace Sense is implemented as Organ 11 — Gmail/Drive/Calendar DWD reads with substrate gates, warrants for private content, live credential probe when operator setup is complete, and a gated generic `workspace_call` write actuator that still requires per-service toggles, a master write warrant, Guardian authorization, idempotency, and live proof before any specific mutation may be claimed complete.
+- Google Workspace Sense is implemented as Organ 11 — DWD reads for everyday Gmail/Drive/Calendar, discovery catalog tools so method paths are browsed rather than invented, and a gated universal `workspace_call` actuator for scoped Google services that still requires the master write warrant, Guardian authorization, idempotency, and live proof before any specific mutation may be claimed complete.
 - Proprietary organ-delivery procedures define how **new organs** integrate without breaking Mecca compliance — they do **not** cap Rozi to organ tools only; general web actuators (curl/shell, Perplexity, authenticated browser bridges) remain first-class.
 - The architecture blocks a known false-success class.
 - Kryptonite is the first major body of Rozi X MECCA.
@@ -1345,8 +1353,8 @@ Ingest PDF/EPUB (and similar) into chunked, embedded, provenance-bearing knowled
 6. Add explicit `schedule_intent` tool naming once compatibility pressure is gone.
 7. Expand outcome settlement reporting in the UI/log surface.
 8. Add a developer-facing verifier registry reference.
-9. Live chat smoke: Organ 11 `gmail_search_messages` in user session with organ enabled and warrant policy confirmed.
-10. Organ 11 Phase 2: write warrant model + Gmail send / Calendar create / Drive upload (after Phase 1 probe stable).
+9. Live chat smoke: Organ 11 `gmail_search_messages` / discovery browse in a user session with organ enabled and warrant policy confirmed.
+10. Organ 11 write path: keep proving specific mutations under master write warrant + Guardian + live domain proof (send / calendar create / Drive media / Sheets) — discovery catalog is shipped; false-success on `ok` alone remains forbidden.
 
 ---
 

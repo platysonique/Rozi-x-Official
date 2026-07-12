@@ -10,4 +10,4 @@
 
 **Honest frame:** Rozi X MECCA is a serious local-first cognitive architecture under active construction. It should not be read as finished AGI, a sentient being, a certified safety framework, a guaranteed trading system, or a completed autonomous enterprise product.
 
-**Last public refresh:** 2026-07-11.
+**Last public refresh:** 2026-07-12.
