@@ -7,105 +7,403 @@
   <meta name="description" content="Official architecture documentation for Rozi X MECCA by Platysonique." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0b1020;
-      --panel: #121a2e;
+      --bg: #05070f;
+      --panel: rgba(8, 12, 24, 0.92);
+      --stroke: rgba(120, 160, 255, 0.22);
       --text: #e8eefc;
-      --muted: #9aabcb;
+      --muted: #8b9bb8;
       --accent: #3dfff3;
-      --line: #24314f;
+      --accent-2: #ff7a59;
+      --glow: rgba(61, 255, 243, 0.35);
+      --font-display: "Orbitron", system-ui, sans-serif;
+      --font-body: "IBM Plex Sans", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: "IBM Plex Sans", system-ui, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #1a2744 0%, var(--bg) 55%);
+      min-height: 100vh;
+      font-family: var(--font-body);
       color: var(--text);
       line-height: 1.65;
+      background:
+        radial-gradient(1200px 560px at -8% -12%, rgba(91, 140, 255, 0.22), transparent 55%),
+        radial-gradient(900px 480px at 108% 4%, rgba(255, 79, 216, 0.14), transparent 52%),
+        radial-gradient(700px 420px at 50% 110%, rgba(61, 255, 243, 0.08), transparent 55%),
+        var(--bg);
+      background-attachment: fixed;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(120, 160, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120, 160, 255, 0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
     }
     .topnav {
-      position: sticky; top: 0; z-index: 20;
-      display: flex; gap: 1rem; align-items: center; justify-content: space-between;
-      padding: 0.85rem 1.25rem;
-      background: rgba(11,16,32,0.92);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.35rem;
+      border-bottom: 1px solid var(--stroke);
+      background:
+        radial-gradient(900px 220px at 0% 0%, rgba(91, 140, 255, 0.16), transparent 55%),
+        radial-gradient(700px 200px at 100% 0%, rgba(255, 79, 216, 0.1), transparent 50%),
+        rgba(5, 7, 15, 0.88);
+      backdrop-filter: blur(14px);
     }
-    .topnav a {
-      color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    .brand {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
     }
-    .topnav a:hover { text-decoration: underline; }
-    .brand { color: var(--text); font-weight: 600; letter-spacing: 0.02em; }
-    .brand span { color: var(--muted); font-weight: 400; margin-left: 0.4rem; }
-    main {
-      max-width: 820px;
+    .brand span {
+      color: var(--accent);
+      margin-left: 0.45rem;
+      text-shadow: 0 0 18px var(--glow);
+    }
+    .nav-links {
+      display: flex;
+      gap: 0.85rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.primary {
+      color: var(--accent);
+      font-weight: 600;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid rgba(61, 255, 243, 0.35);
+      border-radius: 999px;
+      box-shadow: 0 0 18px rgba(61, 255, 243, 0.12);
+    }
+    .nav-links a.primary:hover {
+      background: rgba(61, 255, 243, 0.08);
+    }
+    .shell {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 2rem 1.25rem 4rem;
+      padding: 1.75rem 1.25rem 3.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.25rem;
     }
-    article h1, article h2, article h3, article h4 {
-      font-family: "IBM Plex Serif", Georgia, serif;
+    @media (min-width: 980px) {
+      .shell {
+        grid-template-columns: 220px minmax(0, 1fr);
+        align-items: start;
+        gap: 1.5rem;
+      }
+    }
+    .toc {
+      display: none;
+    }
+    @media (min-width: 980px) {
+      .toc {
+        display: block;
+        position: sticky;
+        top: 4.6rem;
+        max-height: calc(100vh - 5.5rem);
+        overflow: auto;
+        padding: 1rem 0.85rem;
+        border: 1px solid var(--stroke);
+        border-radius: 16px;
+        background:
+          radial-gradient(400px 180px at 0% 0%, rgba(61, 255, 243, 0.08), transparent 60%),
+          var(--panel);
+        backdrop-filter: blur(10px);
+      }
+      .toc .toc-label {
+        margin: 0 0 0.75rem;
+        font-family: var(--font-display);
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .toc a {
+        display: block;
+        padding: 0.35rem 0.4rem;
+        margin-bottom: 0.15rem;
+        border-radius: 8px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        transition: color 0.15s ease, background 0.15s ease;
+      }
+      .toc a:hover {
+        color: var(--text);
+        background: rgba(61, 255, 243, 0.08);
+      }
+    }
+    .hero {
+      margin-bottom: 1.25rem;
+      padding: 1.5rem 1.35rem 1.4rem;
+      border: 1px solid var(--stroke);
+      border-radius: 18px;
+      background:
+        radial-gradient(700px 240px at 0% 0%, rgba(91, 140, 255, 0.2), transparent 55%),
+        radial-gradient(560px 220px at 100% 0%, rgba(255, 122, 89, 0.12), transparent 50%),
+        var(--panel);
+      box-shadow: 0 0 40px rgba(61, 255, 243, 0.06);
+      animation: rise 0.55s ease both;
+    }
+    .eyebrow {
+      margin: 0 0 0.45rem;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-shadow: 0 0 16px var(--glow);
+    }
+    .hero h1 {
+      margin: 0 0 0.65rem;
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.2vw, 2rem);
+      letter-spacing: 0.04em;
       line-height: 1.25;
-      scroll-margin-top: 4rem;
     }
-    article h1 { font-size: 2rem; margin-top: 0; }
+    .hero .lede {
+      margin: 0;
+      max-width: 46rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+    .doc-card {
+      padding: 1.35rem 1.25rem 2rem;
+      border: 1px solid var(--stroke);
+      border-radius: 18px;
+      background:
+        radial-gradient(900px 300px at 100% 0%, rgba(91, 140, 255, 0.08), transparent 55%),
+        rgba(8, 12, 24, 0.78);
+      backdrop-filter: blur(8px);
+      animation: rise 0.7s ease both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    article h1 { display: none; }
+    article h2, article h3, article h4 {
+      line-height: 1.3;
+      scroll-margin-top: 5rem;
+    }
     article h2 {
-      margin-top: 2.4rem;
-      padding-top: 0.6rem;
-      border-top: 1px solid var(--line);
-      font-size: 1.45rem;
+      margin: 2.35rem 0 0.9rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(120, 160, 255, 0.18);
+      font-family: var(--font-display);
+      font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+      letter-spacing: 0.05em;
+      color: var(--text);
+      text-shadow: 0 0 24px rgba(61, 255, 243, 0.12);
     }
-    article h3 { margin-top: 1.6rem; font-size: 1.15rem; }
-    article p, article li { color: #d7e0f5; }
-    article a { color: var(--accent); }
+    article h2:first-of-type {
+      margin-top: 0.4rem;
+      padding-top: 0;
+      border-top: 0;
+    }
+    article h2::after {
+      content: "";
+      display: block;
+      width: 3.2rem;
+      height: 2px;
+      margin-top: 0.55rem;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      box-shadow: 0 0 12px var(--glow);
+    }
+    article h3 {
+      margin: 1.55rem 0 0.55rem;
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
+      color: #c9d7f5;
+    }
+    article h4 {
+      margin: 1.2rem 0 0.45rem;
+      font-size: 0.98rem;
+      color: #d7e0f5;
+    }
+    article p, article li { color: #d5def2; }
+    article strong { color: #f2f6ff; }
+    article a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(61, 255, 243, 0.35);
+    }
+    article a:hover {
+      text-shadow: 0 0 12px var(--glow);
+    }
     article code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.9em;
-      background: #18233b;
-      padding: 0.1em 0.35em;
-      border-radius: 4px;
+      font-size: 0.88em;
+      color: #b8fff8;
+      background: rgba(61, 255, 243, 0.08);
+      border: 1px solid rgba(61, 255, 243, 0.18);
+      padding: 0.08em 0.38em;
+      border-radius: 6px;
     }
     article pre {
-      background: #0f1729;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 1rem;
+      background: rgba(5, 8, 18, 0.9);
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 1rem 1.05rem;
       overflow-x: auto;
+      box-shadow: inset 0 0 30px rgba(61, 255, 243, 0.04);
     }
-    article pre code { background: transparent; padding: 0; }
+    article pre code {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      color: #d7e0f5;
+    }
     article table {
-      width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.95rem;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 1.1rem 0;
+      font-size: 0.93rem;
+      overflow: hidden;
+      border: 1px solid var(--stroke);
+      border-radius: 12px;
     }
     article th, article td {
-      border: 1px solid var(--line); padding: 0.55rem 0.65rem; vertical-align: top;
+      padding: 0.65rem 0.75rem;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(120, 160, 255, 0.14);
     }
-    article th { background: var(--panel); text-align: left; }
+    article tr:last-child td { border-bottom: 0; }
+    article th {
+      background: rgba(61, 255, 243, 0.08);
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    article tr:nth-child(even) td {
+      background: rgba(120, 160, 255, 0.04);
+    }
     article blockquote {
-      margin: 1rem 0; padding: 0.2rem 1rem;
+      margin: 1.15rem 0;
+      padding: 0.85rem 1rem;
       border-left: 3px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: rgba(61, 255, 243, 0.06);
       color: var(--muted);
+      box-shadow: 0 0 24px rgba(61, 255, 243, 0.06);
     }
-    article hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+    article hr {
+      border: 0;
+      height: 1px;
+      margin: 2rem 0;
+      background: linear-gradient(90deg, transparent, rgba(61, 255, 243, 0.45), transparent);
+    }
+    article ul, article ol { padding-left: 1.25rem; }
+    article li { margin: 0.28rem 0; }
     .foot {
-      margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
-      color: var(--muted); font-size: 0.9rem;
+      margin-top: 2.5rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid rgba(120, 160, 255, 0.18);
+      color: var(--muted);
+      font-size: 0.88rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: space-between;
+      align-items: center;
     }
+    .foot a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .foot a:hover { text-shadow: 0 0 12px rgba(255, 122, 89, 0.45); }
   </style>
 </head>
 <body>
   <nav class="topnav">
-    <div class="brand">Platysonique <span>Rozi X Official</span></div>
-    <div>
+    <div class="brand">Platysonique<span>Rozi X Official</span></div>
+    <div class="nav-links">
       <a href="../">Home</a>
-      &nbsp;·&nbsp;
-      <a href="../voyage/">Architecture Voyage</a>
+      <a class="primary" href="../voyage/">Architecture Voyage</a>
     </div>
   </nav>
-  <main>
-    <article>
+  <div class="shell">
+    <aside class="toc">
+      <p class="toc-label">On this page</p>
+      <a href="#document-status">Document Status</a>
+<a href="#abstract">Abstract</a>
+<a href="#executive-overview">Executive Overview</a>
+<a href="#investor-brief">Investor Brief</a>
+<a href="#current-system-footprint">Current System Footprint</a>
+<a href="#architectural-convergence">Architectural Convergence</a>
+<a href="#kryptonite-as-proof-environment">Kryptonite As Proof Environment</a>
+<a href="#core-thesis">Core Thesis</a>
+<a href="#definitions">Definitions</a>
+<a href="#architecture-overview">Architecture Overview</a>
+<a href="#current-rozi-x-capability-presentation">Current Rozi X Capability Presentation</a>
+<a href="#organ-1-conversation-organ">Organ 1: Conversation Organ</a>
+<a href="#organ-2-autonomous-intent">Organ 2: Autonomous Intent</a>
+<a href="#organ-3-learning-authority">Organ 3: Learning Authority</a>
+<a href="#organ-4-constraint-layer">Organ 4: Constraint Layer</a>
+<a href="#organ-5-executor-tool-actuator-layer">Organ 5: Executor / Tool Actuator Layer</a>
+<a href="#organ-6-domain-truth-and-reconciliation">Organ 6: Domain Truth And Reconciliation</a>
+<a href="#organ-7-universal-outcome-envelope">Organ 7: Universal Outcome Envelope</a>
+<a href="#organ-8-settlement-metabolism">Organ 8: Settlement Metabolism</a>
+<a href="#organ-9-guardian-cognitive-immune-system">Organ 9: Guardian / Cognitive Immune System</a>
+<a href="#organ-10-subject-image-enrichment-research-sense-organ">Organ 10: Subject Image Enrichment (Research Sense Organ)</a>
+<a href="#organ-11-google-workspace-sense-track-b">Organ 11: Google Workspace Sense (Track B)</a>
+<a href="#capability-organ-delivery-model">Capability Organ Delivery Model</a>
+<a href="#the-algorithm-universal-predicate-gated-reconciliation">The Algorithm: Universal Predicate-Gated Reconciliation</a>
+<a href="#implemented-evidence">Implemented Evidence</a>
+<a href="#prior-art-and-literature-positioning">Prior Art And Literature Positioning</a>
+<a href="#claimed-contribution">Claimed Contribution</a>
+<a href="#current-claims-boundary">Current Claims Boundary</a>
+<a href="#research-agenda">Research Agenda</a>
+<a href="#near-term-implementation-gates">Near-Term Implementation Gates</a>
+<a href="#executive-summary">Executive Summary</a>
+<a href="#conclusion">Conclusion</a>
+<a href="#development-lineage-and-internal-originality">Development Lineage And Internal Originality</a>
+    </aside>
+    <div>
+      <header class="hero">
+        <p class="eyebrow">Official Documentation</p>
+        <h1>Rozi X MECCA</h1>
+        <p class="lede">Architecture overview, claim boundaries, and investor-facing technical handoff — same visual world as the voyage, on its own page.</p>
+      </header>
+      <div class="doc-card">
+        <article>
 <h1>Rozi X MECCA Official Documentation</h1>
-<h2>Document Status</h2>
+<h2 id="document-status">Document Status</h2>
 <p><strong>Status:</strong> official architecture overview and investor-facing technical handoff, grounded in current repository evidence, internal research, implemented substrate code, capability-organ implementation evidence, and live runtime proof where explicitly stated.</p>
 <p><strong>Audience:</strong> builders, operators, and diligence readers. Plain-language capability examples appear in <strong>What Rozi Can Do In Real Life</strong>; architecture depth and claim boundaries remain intact elsewhere.</p>
 <p><strong>Canonical rule:</strong> this document describes the Rozi X MECCA architecture as it currently exists and as it is being hardened. It does not override verified code, proprietary internal truth records, or live runtime evidence.</p>
@@ -114,7 +412,7 @@
 <p><strong>Boundary:</strong> Rozi X MECCA must not be described as a finished artificial general intelligence, a sentient being, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or a proven first-ever scientific discovery. It is a serious local-first cognitive architecture under active construction, with implemented substrate pieces and remaining proof gates.</p>
 <p><strong>Last public refresh:</strong> 2026-07-11.</p>
 <hr>
-<h2>Abstract</h2>
+<h2 id="abstract">Abstract</h2>
 <p>Rozi X MECCA is a local-first cognitive substrate architecture for autonomous assistant organisms. It treats memory, intent, action, verification, settlement, and authority as parts of one outcome-grounded control system instead of separate chatbot features. The core thesis is that an assistant should not claim completion because a tool returned <code>success: true</code>, a scheduler fired, or an idempotency layer replayed a cached result. It should claim completion only when the relevant domain truth adapter verifies that the intended predicate is satisfied.</p>
 <p>MECCA means <strong>Metabolic Evolutionary Contract Cognition Architecture</strong>. It is the cognitive substrate. Rozi X is the target organism: owner-loyal, portable, local-first, authority-aware, and able to grow from verified experience. Kryptonite is the first large working body of the organism: a real exchange-connected trading workstation with event-driven data, ledger truth, capital controls, AI coordination, and autonomous operating laws.</p>
 <p>The newest implemented core is <strong>Universal Predicate-Gated Reconciliation</strong>: every future promise or action intent becomes a desired-state contract. Time is only a gate. Tools are only actuators. Domain truth verifiers decide whether the predicate is true. Universal Outcome Envelopes carry phase truth, evidence, remaining gap, and next action. Settlement converts verified outcomes into credit, confidence, learning, and future authority.</p>
@@ -122,7 +420,7 @@
 <p>This architecture synthesizes established ideas: cybernetics, control theory, MAPE-K autonomic computing, Belief-Desire-Intention agents, OODA, Kubernetes-style reconciliation, desired-state configuration, runtime verification, proof-carrying code, sagas, event sourcing, proper scoring rules, Reflexion-style verbal reinforcement, skill libraries, and object-capability security. Its novelty is not that those fields were invented here. Its contribution is the unification of those mechanisms into a local-first assistant organism whose claims, memories, skills, and authority are settled against verified outcomes.</p>
 <p>The practical framing is simpler: <strong>MECCA is the framework</strong>. The model is a replaceable brain. The workflows — intent contracts, tool actuation under Guardian, domain verification, outcome envelopes, settlement, cognitive blackboard metabolism, and interruptible thought drafts — are what turn a capable language model into a disciplined assistant organism instead of a chat window that hopes the next token is enough.</p>
 <hr>
-<h2>Executive Overview</h2>
+<h2 id="executive-overview">Executive Overview</h2>
 <p>Rozi X MECCA is best described as:</p>
 <ul>
 <li><strong>A contract-cognition architecture:</strong> memories, lessons, skills, rules, and actions are treated as testable commitments, not inert stored text.</li>
@@ -138,7 +436,7 @@
 <p>Rozi X MECCA is a novel synthesis architecture for a local-first autonomous assistant organism, built from real control, verification, learning, and security principles, with working code paths that already enforce verified predicate settlement for scheduled intent and action outcomes — and metabolic continuity for interrupted cognition — under substrate law rather than prompt hope.</p>
 </blockquote>
 <hr>
-<h2>Investor Brief</h2>
+<h2 id="investor-brief">Investor Brief</h2>
 <p>This document is meant to travel. A diligence reader should leave with three truths:</p>
 <ol>
 <li><strong>The product is not “a chat model with plugins.”</strong> Rozi X is a <strong>first-party organism</strong>: memory, authority, tools, trading body, remote channels, and verification are designed as one metabolism. The language model is a replaceable brain inside that metabolism — not the product itself.</li>
@@ -147,7 +445,7 @@
 </ol>
 <p>What not to sell from this page: guaranteed returns, AGI, regulatory certification, or “handles every website / every workflow already.” What to evaluate: architecture coherence, implemented substrate, honest claim boundaries, and a body that already touches live markets and live operator work.</p>
 <hr>
-<h2>Current System Footprint</h2>
+<h2 id="current-system-footprint">Current System Footprint</h2>
 <p>These figures are measured from the tracked app repository after excluding local runtime database/export artifacts. They are not marketing projections. They are the current physical footprint of the system Rozi X MECCA is growing from.</p>
 <table>
 <thead>
@@ -202,7 +500,7 @@
 </ul>
 <p>The strategic significance is not that a neural model exists somewhere in the stack. The stronger point is that the app already contains the operational bones of an outcome-settled learning organism: vector memory, experience capture, model registry, canary/promotion fields, high-credit corpus export, warrant credit, action settlement, and local-model serving seams connected to a real trading/operator body.</p>
 <hr>
-<h2>Architectural Convergence</h2>
+<h2 id="architectural-convergence">Architectural Convergence</h2>
 <p>Rozi X MECCA did not originate from a single document or model answer. It emerged from internal research passes, code audits, literature-backed review, clean-room subagents, independent analysis, and external comparison. The important result is that the independent runs did not merely agree on tone; they converged on the same missing architecture and named it differently.</p>
 <table>
 <thead>
@@ -411,7 +709,7 @@
 </blockquote>
 <p>That is the difference between a paper idea and an organism beginning to form.</p>
 <hr>
-<h2>Kryptonite As Proof Environment</h2>
+<h2 id="kryptonite-as-proof-environment">Kryptonite As Proof Environment</h2>
 <p>Kryptonite is not discarded by Rozi X MECCA. It is the reason the architecture became real.</p>
 <p>Kryptonite supplied:</p>
 <ul>
@@ -433,7 +731,7 @@ Only domain verification satisfying the desired predicate can produce reconciled
 </code></pre>
 <p>This is the bridge from Kryptonite to Rozi X MECCA. Trading forced the architecture to stop trusting text, tool returns, and cached success. It forced the organism to ground itself in verified reality.</p>
 <hr>
-<h2>Core Thesis</h2>
+<h2 id="core-thesis">Core Thesis</h2>
 <p>Most assistant systems treat actions procedurally:</p>
 <pre><code class="language-text">user asks -&gt; model selects tool -&gt; tool returns success -&gt; assistant claims completion
 </code></pre>
@@ -505,7 +803,7 @@ Only domain verification satisfying the desired predicate can produce reconciled
 </code></pre>
 <p>If a proposed fix names a specific tool sequence but does not name the predicate, verifier, envelope phase, and settlement path, it is a symptom patch.</p>
 <hr>
-<h2>Definitions</h2>
+<h2 id="definitions">Definitions</h2>
 <h3>Rozi X</h3>
 <p>Rozi X is the target organism. It is the owner-loyal, local-first, authority-aware assistant identity that should eventually move beyond one app body while preserving its governance, learning history, values, and proof obligations.</p>
 <h3>MECCA</h3>
@@ -561,7 +859,7 @@ eligible_t = T(t) AND C(I, O_t) AND A(I, R)
 <p>If not eligible, it records waiting, blocked, expired, or ambiguous.</p>
 <p>If eligible and the predicate is false, the system chooses an action that should reduce the gap, executes it, observes again, and settles only if <code>P(O_t+1)</code> is true.</p>
 <hr>
-<h2>Architecture Overview</h2>
+<h2 id="architecture-overview">Architecture Overview</h2>
 <pre><code class="language-mermaid">flowchart TD
     UserOrHeartbeat[&quot;User Or Heartbeat&quot;] --&gt; ConversationOrgan[&quot;Conversation Organ&quot;]
     ConversationOrgan --&gt; Intent[&quot;Autonomous Intent&quot;]
@@ -601,7 +899,7 @@ eligible_t = T(t) AND C(I, O_t) AND A(I, R)
 </ol>
 <p><strong>Cognitive metabolism (substrate extension, not a numbered organ):</strong> continuous shared working memory (cognitive blackboard), async read/research jobs with natural interjection, idle attention proposals, and organism concern awareness (structured self-checks with sense≠speak). This is the think-time twin of settlement metabolism — still under active hardening and not a claim of finished AGI cognition.</p>
 <hr>
-<h2>Current Rozi X Capability Presentation</h2>
+<h2 id="current-rozi-x-capability-presentation">Current Rozi X Capability Presentation</h2>
 <p>Rozi X MECCA is presented here as a working architecture and capability suite. This section describes what Rozi does today, how MECCA gives those capabilities discipline, and where the official claim boundary remains until runtime proof exists.</p>
 <h3>Executive View</h3>
 <p><strong>Rozi X</strong> is a local-first AI operating organism for the operator&#39;s work. She lives in the desktop app, connects to real tools, remembers useful context, manages a live trading body, communicates through desktop chat and Telegram, and grows through specialized capability organs.</p>
@@ -829,7 +1127,7 @@ eligible_t = T(t) AND C(I, O_t) AND A(I, R)
 </ul>
 <p>The defensible claim is narrower and stronger: Rozi is a real local-first assistant organism with a verified control architecture, a live trading body, operator surfaces, growing capability organs, a specialist-harness membrane, continuous cognition with interruptible Thought drafts, durable operator memory under applicable recall, and a discipline that <strong>done means verified against reality</strong> — not narrated.</p>
 <hr>
-<h2>Organ 1: Conversation Organ</h2>
+<h2 id="organ-1-conversation-organ">Organ 1: Conversation Organ</h2>
 <p>The Conversation Organ forms live situational understanding. It does not authorize action. It reads the current conversational state, recent context, live evidence, known constraints, learning signals, user correction signals, and the current mode.</p>
 <p>Implemented surface:</p>
 <ul>
@@ -841,7 +1139,7 @@ eligible_t = T(t) AND C(I, O_t) AND A(I, R)
 </ul>
 <p>Its purpose is not to be clever in isolation. Its purpose is to form the candidate that later organs can reject, execute, verify, settle, or learn from.</p>
 <hr>
-<h2>Organ 2: Autonomous Intent</h2>
+<h2 id="organ-2-autonomous-intent">Organ 2: Autonomous Intent</h2>
 <p>Autonomous Intent is the structured object that converts situational understanding into a proposed action path with evidence, scope, risk summary, expected outcome, idempotency key, and stop conditions.</p>
 <p>It is not a permission ticket.</p>
 <p>The correct rule:</p>
@@ -861,7 +1159,7 @@ Settlement learns.
 <li>tool-risk classification</li>
 </ul>
 <hr>
-<h2>Organ 3: Learning Authority</h2>
+<h2 id="organ-3-learning-authority">Organ 3: Learning Authority</h2>
 <p>Learning Authority separates different kinds of remembered information. A discussion signal is not a directive. A user preference is not a safety invariant. An architecture invariant is not a casual observation.</p>
 <p>The authority lattice includes:</p>
 <ul>
@@ -875,7 +1173,7 @@ Settlement learns.
 <p><strong>Applicable recall (organism law):</strong> durable operator preferences and directives must be stored as substrate objects with explicit authority — not as chat narration that “remembered forever.” Verbal acknowledgment alone is not Learning Authority. Recall must be <strong>applicable</strong>: style and directive memories compete through the memory system when the turn matches; they must not be dumped into every conversation turn. Preferences bias wording and choices; directives bias autonomous judgment and strategy; neither overrides live evidence or bypasses Guardian, warrants, or domain verification.</p>
 <p><strong>Claim boundary:</strong> durable operator-memory write/recall packaging is implemented substrate (<code>record_operator_memory</code> / claim objects with authority, fine scope, supersession, applicable recall). Verbal acknowledgment alone still does not etch. Prefer fine scopes so sibling preferences coexist. Dump-all recall remains forbidden.</p>
 <hr>
-<h2>Organ 4: Constraint Layer</h2>
+<h2 id="organ-4-constraint-layer">Organ 4: Constraint Layer</h2>
 <p>The Constraint Layer invalidates bad intent. It does not grant permission.</p>
 <p>It checks:</p>
 <ul>
@@ -889,7 +1187,7 @@ Settlement learns.
 </ul>
 <p>This is one of the most important philosophical corrections in the architecture. Rozi is not a chatbot asking for permission slips. Rozi forms intent, then must survive self-check and proof obligations.</p>
 <hr>
-<h2>Organ 5: Executor / Tool Actuator Layer</h2>
+<h2 id="organ-5-executor-tool-actuator-layer">Organ 5: Executor / Tool Actuator Layer</h2>
 <p>The Executor is motor-only. It does not interpret conversation. It receives valid intent and performs the smallest correct action path.</p>
 <p>The Executor must:</p>
 <ul>
@@ -908,7 +1206,7 @@ Settlement learns.
 <li>bypass Guardian or domain truth.</li>
 </ul>
 <hr>
-<h2>Organ 6: Domain Truth And Reconciliation</h2>
+<h2 id="organ-6-domain-truth-and-reconciliation">Organ 6: Domain Truth And Reconciliation</h2>
 <p>Domain Truth is the line between an assistant that talks and an organism that knows whether reality changed.</p>
 <p>Implemented surface:</p>
 <ul>
@@ -935,7 +1233,7 @@ What evidence supports that answer?
 </ul>
 <p>The scheduled-action repair is the canonical example. <code>schedule_task</code> still exists as an assistant-facing tool, but internally it creates a durable desired-state job. Due work is delegated to the reconciliation kernel. The kernel observes truth, executes only if a gap exists, verifies again, and settles only if the predicate is true.</p>
 <hr>
-<h2>Organ 7: Universal Outcome Envelope</h2>
+<h2 id="organ-7-universal-outcome-envelope">Organ 7: Universal Outcome Envelope</h2>
 <p>The Universal Outcome Envelope is the shared language of action truth.</p>
 <p>Phases:</p>
 <pre><code class="language-text">intended
@@ -971,7 +1269,7 @@ duplicate_call_suppressed -&gt; ambiguous unless truth_verification.satisfied
 </code></pre>
 <p>This directly prevents the false-success class found in the scheduled LTC unblock test.</p>
 <hr>
-<h2>Organ 8: Settlement Metabolism</h2>
+<h2 id="organ-8-settlement-metabolism">Organ 8: Settlement Metabolism</h2>
 <p>Settlement is how the organism learns from reality.</p>
 <p>Before meaningful action, Rozi records a prediction/warrant:</p>
 <pre><code class="language-text">If this action is taken under this intent and evidence, this outcome is expected.
@@ -991,7 +1289,7 @@ What credit or confidence should change?
 </ul>
 <p>The current scoring foundation includes Brier-style prediction error and confidence/credit updates. This is intentionally conservative. More complex credit markets, Thompson sampling, Bayesian truth serum, CVaR, or Shapley-style attribution may come later, but the safe core is verified-outcome settlement.</p>
 <hr>
-<h2>Organ 9: Guardian / Cognitive Immune System</h2>
+<h2 id="organ-9-guardian-cognitive-immune-system">Organ 9: Guardian / Cognitive Immune System</h2>
 <p>Guardian is the boundary between cognition and dangerous authority.</p>
 <p>It must be:</p>
 <ul>
@@ -1012,7 +1310,7 @@ What credit or confidence should change?
 </ul>
 <p>The Guardian is not a fear cage. It is immune function. It allows growth by making corruption harder to absorb as learning.</p>
 <hr>
-<h2>Organ 10: Subject Image Enrichment (Research Sense Organ)</h2>
+<h2 id="organ-10-subject-image-enrichment-research-sense-organ">Organ 10: Subject Image Enrichment (Research Sense Organ)</h2>
 <p>Subject Image Enrichment is the first specialized <strong>capability organ</strong> beyond the nine-substrate control loop. It is not a people-database broker, CRM enricher, or identity oracle. It is a read-only public-web research sense: discover candidate photos of a named subject, verify them against context, and return honest structured outcomes.</p>
 <p>Hard rules:</p>
 <ol>
@@ -1076,7 +1374,7 @@ What credit or confidence should change?
 <li>registry regression on tool authority and outcome envelopes unchanged</li>
 </ul>
 <hr>
-<h2>Organ 11: Google Workspace Sense (Track B)</h2>
+<h2 id="organ-11-google-workspace-sense-track-b">Organ 11: Google Workspace Sense (Track B)</h2>
 <p>Google Workspace Sense is the second specialized <strong>capability organ</strong>. It reads the owner&#39;s Gmail, Drive, and Calendar via <strong>Domain-Wide Delegation (DWD)</strong> — impersonating a fixed Workspace user configured in Settings, never from LLM tool arguments.</p>
 <p>Hard rules:</p>
 <ol>
@@ -1251,11 +1549,11 @@ What credit or confidence should change?
 <p>Write boundary: Gmail send, Calendar create, Drive mutations, and other Workspace methods flow through <code>workspace_call</code>; availability does not prove mutation. Each write still needs the configured toggle/warrant/Guardian gates and live proof for the specific mutation before Rozi may claim completion.</p>
 <p><strong>Build pattern:</strong> Organ 11 is the reference template for authenticated external-API capability organs (DWD/auth factory + dedicated TOOL_GROUP + health probe). Delivery follows proprietary internal build procedures before operational claims are made.</p>
 <hr>
-<h2>Capability Organ Delivery Model</h2>
+<h2 id="capability-organ-delivery-model">Capability Organ Delivery Model</h2>
 <p>Capability organs are settled, gated, auditable limbs for repeatable workflows. They are not the boundary of Rozi&#39;s general intelligence, web access, code access, or research access. Rozi can still use general actuators for one-off work; an organ exists when a workflow needs repeatable structure, credentials, substrate gates, outcome envelopes, tests, operator surfaces, and live proof.</p>
 <p>A new organ is not considered live because someone wrote code or a tool returned success. It is live only when implementation, operator setup, runtime gates, and domain proof agree. Proprietary internal procedures govern the delivery sequence; the public architecture claim is narrower and stronger: organs are released through a controlled process, and completion requires verified reality rather than narration.</p>
 <hr>
-<h2>The Algorithm: Universal Predicate-Gated Reconciliation</h2>
+<h2 id="the-algorithm-universal-predicate-gated-reconciliation">The Algorithm: Universal Predicate-Gated Reconciliation</h2>
 <p>The algorithm can be written as:</p>
 <pre><code class="language-text">Input:
   intent I = &lt;D, R, P, C, T, A, V, M, H&gt;
@@ -1293,7 +1591,7 @@ If eligible and not satisfied:
 <pre><code class="language-text">No verified predicate, no final completion claim.
 </code></pre>
 <hr>
-<h2>Implemented Evidence</h2>
+<h2 id="implemented-evidence">Implemented Evidence</h2>
 <p>As of the 2026-07-11 documentation refresh, the following public-safe implementation evidence exists. Focused suite counts below are historical snapshots from organ delivery; the live branch collects on the order of <strong>~1145</strong> tests — re-run the suite for current pass totals.</p>
 <table>
 <thead>
@@ -1400,7 +1698,7 @@ If eligible and not satisfied:
 <li>Cognition E2E proofs recorded in internal research logs: async job → narrated interjection; attention propose → enqueue → interject; Stop/barge-in → Thought draft seal with redirect/settle tools available to MAIN; organism concern digest + boot speak quiet-on-repeat fingerprint; no canned boot concern scripts.</li>
 </ul>
 <hr>
-<h2>Prior Art And Literature Positioning</h2>
+<h2 id="prior-art-and-literature-positioning">Prior Art And Literature Positioning</h2>
 <p>Rozi X MECCA should be positioned as a synthesis architecture, not a claim that every component was invented here.</p>
 <h3>MAPE-K / Autonomic Computing</h3>
 <p>IBM&#39;s autonomic computing blueprint defines self-managing systems around monitor, analyze, plan, execute, and shared knowledge. Rozi X MECCA inherits the control-loop spirit, but adds language-intent contracts, Universal Outcome Envelopes, verified predicate settlement, and authority derived from outcomes.</p>
@@ -1476,7 +1774,7 @@ If eligible and not satisfied:
 <li>object-capability model literature.</li>
 </ul>
 <hr>
-<h2>Claimed Contribution</h2>
+<h2 id="claimed-contribution">Claimed Contribution</h2>
 <p>The correct contribution claim:</p>
 <blockquote>
 <p>Rozi X MECCA unifies contract cognition, desired-state reconciliation, runtime verification, outcome envelopes, proper-scoring settlement, capability security, and local-first assistant memory into one architecture for autonomous assistant organisms.</p>
@@ -1501,7 +1799,7 @@ If eligible and not satisfied:
 <li>First-party motors (trading body, live browser under warrant, Workspace, Telegram, specialist harness) share one verification and settlement law rather than living as unrelated plugins.</li>
 </ol>
 <hr>
-<h2>Current Claims Boundary</h2>
+<h2 id="current-claims-boundary">Current Claims Boundary</h2>
 <p>Do not claim:</p>
 <ul>
 <li>Rozi X MECCA is AGI.</li>
@@ -1533,7 +1831,7 @@ If eligible and not satisfied:
 <li>The next proof gates include live runtime smoke, browser hard-page probe matrix, expansion of domain verifiers, recovery-quality scoring for interrupted thoughts, and fuller Research Quest / knowledge-ingest organs.</li>
 </ul>
 <hr>
-<h2>Research Agenda</h2>
+<h2 id="research-agenda">Research Agenda</h2>
 <h3>1. Expand Domain Verifiers</h3>
 <p>Current verifier classes are generic, trading symbol state, and config key state. Next verifiers should include:</p>
 <ul>
@@ -1610,7 +1908,7 @@ If eligible and not satisfied:
 <h3>10. Book / Long-Document Knowledge Ingest</h3>
 <p>Ingest PDF/EPUB (and similar) into chunked, embedded, provenance-bearing knowledge Rozi can <strong>use with citations</strong>, not merely read back — with optional warrant credit when claims survive use.</p>
 <hr>
-<h2>Near-Term Implementation Gates</h2>
+<h2 id="near-term-implementation-gates">Near-Term Implementation Gates</h2>
 <ol>
 <li>Live smoke Universal Predicate-Gated Reconciliation in the running app with a low-risk scheduled intent.</li>
 <li>Confirm <code>list_scheduled_tasks</code> exposes linked intent-job evidence.</li>
@@ -1624,7 +1922,7 @@ If eligible and not satisfied:
 <li>Organ 11 Phase 2: write warrant model + Gmail send / Calendar create / Drive upload (after Phase 1 probe stable).</li>
 </ol>
 <hr>
-<h2>Executive Summary</h2>
+<h2 id="executive-summary">Executive Summary</h2>
 <p>Rozi X MECCA is a developing local-first cognitive substrate for autonomous assistant organisms. Its core insight is that autonomy cannot be trusted until actions, memories, and authority are settled against verified reality. Kryptonite supplied the first real body and the real-world failures that forced this architecture into existence. MECCA supplies the contract-cognition substrate. Rozi X is the organism that grows on top of it.</p>
 <p>For investors, the near-term moat is not one model and not one trading strategy. It is a <strong>first-party framework</strong> — metabolic workflows owned by the organism:</p>
 <ul>
@@ -1640,13 +1938,13 @@ If eligible and not satisfied:
 </ul>
 <p>Swap the brain; keep the metabolism. That is what turns a capable AI into a disciplined organism under substrate law — and why a wrapper around tomorrow’s frontier API is not the same product.</p>
 <hr>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>Rozi X MECCA is not a claim that everything in autonomous AI has been invented from scratch. It is the disciplined assembly of real control, verification, learning, and security traditions into a new assistant-organism architecture. The important shift is from text-centered assistance to outcome-settled cognition — and from disposable chat turns to metabolic continuity.</p>
 <p>The organism is not complete, but the foundation is no longer only theoretical. The verified substrate is in the codebase: domain truth, durable intent jobs, reconciliation kernel, repaired scheduled intent, hardened outcome envelopes, settlement integration, contextual boot recovery, dynamic tool narration, browser-bridge substrate with Settings warrants, durable operator memory with applicable recall, trade-plan mission limb, capital chat truth, Telegram delivery hardening, cognitive blackboard metabolism with interruptible Thought drafts, and implemented capability organs for image enrichment, Workspace access, operator relay, and Cursor delegation.</p>
 <p>The next stage is to expand the body without lying about resources: more verifiers, more domains, specialist harness membranes (Claude Code / IDE) beside Cursor, Research Quest and book-knowledge ingest, recovery-quality credit for interrupted cognition, stronger settlement, stronger Guardian coverage, live smoke and browser probe evidence, and eventually a portable genome that lets Rozi X remain itself across tools, apps, and machines.</p>
 <p>For diligence readers: start with the <strong>Investor Brief</strong> and <strong>What Rozi Can Do In Real Life</strong>, then pressure-test every claim against <strong>Claim Boundaries</strong> and <strong>Implemented Evidence</strong>. Architecture that admits its proof gates is stronger than marketing that pretends they do not exist.</p>
 <hr>
-<h2>Development Lineage And Internal Originality</h2>
+<h2 id="development-lineage-and-internal-originality">Development Lineage And Internal Originality</h2>
 <h3>References Studied For Development</h3>
 <p>The following sources were studied to name the surrounding field, pressure-test the architecture, and avoid pretending that established control, verification, learning, or security concepts were invented here. They informed vocabulary and comparison, not copied implementation.</p>
 <ul>
@@ -1676,8 +1974,13 @@ If eligible and not satisfied:
 <strong>Last Updated:</strong> 2026-07-11
 <strong>Document Scope:</strong> Official Rozi X MECCA architecture overview and capability presentation, covering Organs 10–13, cognitive blackboard metabolism (including organism concern awareness and sense≠speak), specialist harness membrane (Cursor live; Claude Code / VS Code as integration targets), universal scheduled intent, verified reconciliation, research/book-ingest agenda, Workspace and Telegram surfaces, contextual boot recovery, and dynamic tool narration within public claim boundaries and resource-honest parallelism.</p>
 
-    </article>
-    <p class="foot">© Platysonique · Rozi X MECCA Official Documentation · separate from the Architecture Voyage page</p>
-  </main>
+        </article>
+        <div class="foot">
+          <span>© Platysonique · Rozi X MECCA</span>
+          <a href="../voyage/">Open Architecture Voyage →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
