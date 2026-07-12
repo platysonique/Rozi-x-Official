@@ -14,52 +14,69 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/index-DnOXiSl6.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Cx38cwun.css">
+    <script type="module" crossorigin src="./assets/index-B6fjBxjx.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DA5jVPUH.css">
   </head>
   <body>
     <div id="app">
       <aside id="panel">
+        <button
+          type="button"
+          id="btn-drawer"
+          class="drawer-toggle"
+          aria-expanded="true"
+          aria-controls="panel-body"
+        >
+          <span class="drawer-toggle-label">Demos</span>
+          <span id="drawer-active-title" class="drawer-active-title"></span>
+          <span class="drawer-chevron" aria-hidden="true">▾</span>
+        </button>
+
+        <div id="panel-body" class="panel-body">
     <nav class="site-nav" style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:center;margin:0 0 0.85rem;font-size:0.86rem;">
       <a href="../" style="color:#9eb0d4;text-decoration:none;">Home</a>
       <span style="color:#4a628a;">·</span>
       <a href="../docs/" style="color:#3dfff3;text-decoration:none;font-weight:600;">Official Documentation</a>
     </nav>
 
-        <header class="brand">
-          <p class="eyebrow">Rozi X MECCA</p>
-          <h1>Architecture Voyage</h1>
-          <p class="lede">
-            The organism is already concurrent before you press anything.
-            Gold-pulsing nodes are always-live systems. Most demos run multiple
-            colored lanes at once — because that is how the live app works.
-          </p>
-        </header>
+          <header class="brand">
+            <p class="eyebrow">Rozi X MECCA</p>
+            <h1>Architecture Voyage</h1>
+            <p class="lede">
+              The organism is already concurrent before you press anything.
+              Gold-pulsing nodes are always-live systems. Most demos run multiple
+              colored lanes at once — because that is how the live app works.
+            </p>
+          </header>
 
-        <section class="block">
-          <h2>Demo voyages</h2>
-          <p class="category-lede">
-            Two kinds of motion: a human asks, or Rozi starts work on her own.
-          </p>
-          <div id="scenario-buttons" class="scenario-categories"></div>
-        </section>
+          <section class="block">
+            <h2>Demo voyages</h2>
+            <p class="category-lede">
+              Two kinds of motion: a human asks, or Rozi starts work on her own.
+            </p>
+            <div id="scenario-buttons" class="scenario-categories"></div>
+          </section>
 
-        <section class="block">
-          <h2>Now traveling</h2>
-          <div id="voyage-status" class="status-card">
-            <p class="status-idle">Organism is already multi-lane. Choose a query to watch one path through it.</p>
-          </div>
-          <ol id="step-log" class="step-log" aria-live="polite"></ol>
-        </section>
+          <section class="block">
+            <h2>Now traveling</h2>
+            <div id="voyage-status" class="status-card">
+              <p class="status-idle">Organism is already multi-lane. Choose a query to watch one path through it.</p>
+            </div>
+            <ol id="step-log" class="step-log" aria-live="polite"></ol>
+          </section>
 
-        <footer class="foot">
-          <button id="btn-reset" type="button">Reset view</button>
-          <button id="btn-stop" type="button" disabled>Stop voyage</button>
-          <p class="hint">Drag to orbit anytime (even mid-voyage) · scroll to zoom · click a node for its role</p>
-        </footer>
+          <footer class="foot">
+            <button id="btn-reset" type="button">Reset view</button>
+            <button id="btn-stop" type="button" disabled>Stop voyage</button>
+            <p class="hint">Drag to orbit anytime (even mid-voyage) · scroll to zoom · click a node for its role</p>
+          </footer>
+        </div>
       </aside>
-      <div id="stage-wrap">
-        <main id="stage" aria-label="3D architecture graph"></main>
+
+      <div id="viewport">
+        <div id="stage-wrap">
+          <main id="stage" aria-label="3D architecture graph"></main>
+        </div>
         <aside id="movement-explainer" class="movement-explainer" aria-live="polite">
           <p class="explainer-kicker">Rozi X Architecture</p>
           <h2 id="explainer-title">Already alive</h2>
