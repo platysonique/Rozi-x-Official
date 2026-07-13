@@ -20,7 +20,7 @@
 
 ## Abstract
 
-**In one line:** Rozi is an AI assistant you can actually trust to do the thing — because it refuses to say "done" until it has checked that the thing really happened.
+**In one line:** Rozi is built so “done” means checked against reality — not a tool saying “okay.” That verification law was forged on live trading stakes, and we’re extending it to operator workflows.
 
 Most assistants will confidently report completion the moment a tool returns "okay," even when the real world never changed. Rozi X MECCA is built so that kind of false success is illegal by architecture: tools are actuators, not truth. Completion requires domain verification against reality — the difference between an employee who says "I handled it" and one who shows confirmation.
 
@@ -626,7 +626,7 @@ Rozi X MECCA is under active construction. Capability claims must distinguish po
 - Natural, spicy, or observant chat language is a presentation layer over grounded context. It may make Rozi feel more intelligent, but it is not allowed to substitute for authority, evidence, verification, or settlement.
 - Thought drafts are continuity objects, not write warrants. An interrupted thought never authorizes trading, Workspace mutation, or other motor action by itself.
 
-The defensible claim is narrower and stronger: Rozi is a real local-first assistant organism with a verified control architecture, a live trading body, operator surfaces, growing capability organs, a specialist-harness membrane, continuous cognition with interruptible Thought drafts, durable operator memory under applicable recall, and a discipline that **done means verified against reality** — not narrated.
+The defensible claim is narrower and stronger: Rozi is a real local-first assistant organism with a **code-backed** control architecture, a live trading body, operator surfaces, growing capability organs, a specialist-harness membrane, continuous cognition with interruptible Thought drafts, durable operator memory under applicable recall, and a discipline that **done means verified against reality** — not narrated — with **remaining proof gates** still open per Claim Boundaries.
 
 ---
 

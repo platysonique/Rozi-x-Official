@@ -10,7 +10,7 @@ I'm not an engineer. I'm the operator who wouldn't accept a lie.
 
 I built a system that trades and acts on my behalf, and it kept telling me things were done when they weren't. I didn't have the vocabulary for what was wrong — I just knew something was broken at a level nobody was catching. So I made refusing that lie the core law of the system: nothing is "done" until reality is checked and confirmed. I directed the engineering; I enforced the truth.
 
-I've since learned the entire AI field is now racing at this exact problem. I already have a working version — proven on live money, not a benchmark. I didn't come from the research. I got to the same place from the operator's chair, and I got there early.
+I've since learned the entire AI field is now racing at this exact problem. I already have a working version of the **verification law** — pressure-tested on live money, not a benchmark — with remaining proof gates as we extend it. I didn't come from the research. I got to the same place from the operator's chair, and I got there early.
 
 ---
 
@@ -24,13 +24,13 @@ Not on purpose — it didn't know it was lying. It would run a task, the tool wo
 
 I'm not technical enough to have known the computer-science name for that. I just knew, in my gut, that it was unacceptable. A tool that lies about whether it did the thing is worse than no tool at all. So I made a rule, and I enforced it against the machine over and over until the whole system bent around it: **"Done" doesn't mean a tool said "okay." "Done" means we went and checked reality, and reality agrees.**
 
-That rule became the heart of what I built. Everything in the system now has to prove, against the real world, that the thing actually happened before it's allowed to say it did.
+That rule became the heart of what I built. The core law is that the system must prove, against the real world, that the thing actually happened before it's allowed to say it did — on the paths where that law is already wired, and as an expanding standard everywhere else.
 
 I want to be honest about how I built it: I'm not the one who wrote the code. I directed AI systems to do the engineering, and I held the standard — I refused every fake "done," caught every place it lied, and made it prove itself until it worked. The code is the easy part now; anyone can rent that. The hard part was knowing what was broken when no one else saw it, and refusing to let it go for over a year while my own life was falling apart around me.
 
 I recently learned that the biggest names in AI — Google, Microsoft, university labs — are, right now in 2026, publishing paper after paper about this exact failure: AI agents that confidently claim a task is complete when the real world says it isn't. They're studying it in simulations. I've been living it, and fixing it, on a system that trades real money, for a year.
 
-I didn't beat the researchers. But I arrived at the same frontier from a completely different door — the door of a person who just needed the thing to *actually work* — and I have a running, real-stakes version of what they're still theorizing.
+I didn't beat the researchers. But I arrived at the same frontier from a completely different door — the door of a person who just needed the thing to *actually work* — and I have a running, real-stakes **trading-body** version of what they're still theorizing, while other limbs earn the same proof.
 
 That's what Rozi is. And that's why I'm the right person to have built it: not because I'm the smartest engineer in the room, but because I'm the one who wouldn't stop demanding the truth.
 
