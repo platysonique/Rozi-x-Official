@@ -38,7 +38,7 @@ That's what Rozi is. And that's why I'm the right person to have built it: not b
 
 ## The line to never apologize for
 
-**"I don't write the code. I decide what's true. The system enforces it because I refused to."**
+**"I don't write the system. I write the standard."**
 
 Say it plainly. It's not a weakness to explain away — it's the scarcest, most valuable thing in the whole equation. Engineering can be rented by the hour. Judgment and conviction cannot.
 
