@@ -16,6 +16,54 @@
     />
     <script type="module" crossorigin src="./assets/index-G_CYG8cV.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BNLQYMtC.css">
+    <style>
+      .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem 0.9rem;
+        margin: 0 0 0.85rem;
+        font-size: 0.86rem;
+      }
+      .site-nav a {
+        color: #3dfff3;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .site-nav a:hover { text-decoration: underline; }
+      .site-nav-float {
+        position: fixed;
+        top: 0.75rem;
+        right: 0.85rem;
+        z-index: 50;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.45rem 0.75rem;
+        max-width: min(92vw, 28rem);
+        padding: 0.45rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(120, 160, 255, 0.28);
+        background: rgba(5, 7, 15, 0.82);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        font: 500 0.8rem/1.2 "IBM Plex Sans", system-ui, sans-serif;
+      }
+      .site-nav-float a {
+        color: #3dfff3;
+        text-decoration: none;
+      }
+      .site-nav-float a:hover { text-decoration: underline; }
+      .site-credit a {
+        color: #3dfff3;
+        text-decoration: none;
+        pointer-events: auto;
+      }
+      .site-credit { pointer-events: none; }
+      .site-credit a { pointer-events: auto; }
+      @media (min-width: 901px) {
+        .site-nav-float { display: none; }
+      }
+    </style>
   </head>
   <body>
     <div id="app">
@@ -34,6 +82,12 @@
 
         <div id="panel-body" class="panel-body">
           <header class="brand">
+            <nav class="site-nav" aria-label="Site">
+              <a href="../">Home</a>
+              <a href="../about/">What Rozi Is</a>
+              <a href="../about/me/">About Me</a>
+              <a href="../why/">Why it matters</a>
+            </nav>
             <p class="eyebrow">Rozi X MECCA · <a href="../about/me/" style="color:inherit">Adonis Carcamo</a></p>
             <h1>Architecture Voyage</h1>
             <p class="lede">
@@ -83,8 +137,16 @@
       </div>
       <div id="node-tooltip" hidden></div>
 
-    <p class="site-credit" style="position:fixed;left:1rem;bottom:0.75rem;z-index:40;margin:0;max-width:min(92vw,28rem);color:#7a8aa6;font:0.78rem/1.45 'IBM Plex Sans',system-ui,sans-serif;pointer-events:none;text-shadow:0 1px 8px rgba(0,0,0,.7)">
-      © 2026 Adonis Carcamo · Founder, Creator &amp; Visioneer · Platysonique / Rozi X
+    <nav class="site-nav-float" aria-label="Site">
+      <a href="../">Home</a>
+      <a href="../about/">What Rozi Is</a>
+      <a href="../about/me/">About Me</a>
+      <a href="../why/">Why it matters</a>
+    </nav>
+
+    <p class="site-credit" style="position:fixed;left:1rem;bottom:0.75rem;z-index:40;margin:0;max-width:min(92vw,28rem);color:#7a8aa6;font:0.78rem/1.45 'IBM Plex Sans',system-ui,sans-serif;text-shadow:0 1px 8px rgba(0,0,0,.7)">
+      © 2026 Adonis Carcamo · Founder, Creator &amp; Visioneer · Platysonique / Rozi X ·
+      <a href="../">Home</a>
     </p>
     </div>
   </body>
