@@ -1,6 +1,6 @@
 ## Document Status
 
-**What this document is:** The public architecture story for Rozi X MECCA — a living handoff for people who want to understand the project without reading the private codebase. It is written for builders, operators, and diligence readers.
+**What this document is:** The public architecture story for Rozi X MECCA — for anyone who wants to understand the project without reading the private codebase.
 
 **Living document:** This page is updated as the architecture develops. When new capabilities are implemented and ready to describe publicly, they are reflected here. Treat each refresh as a current snapshot of the public architecture narrative, not a one-time frozen brochure.
 
@@ -8,10 +8,8 @@
 
 **How to use it:** Read it as orientation and evidence-backed overview. Later sections carry the substance. Where work is still in progress, this document says so rather than overselling.
 
-**MECCA non-substitution law:** no implementation may substitute prompt instructions, model judgment, tool success, scheduler dispatch, idempotency replay, cached state, hardcoded tool-name lists, or internal state-machine flags for substrate truth. Substrate truth requires the active intent, current authority, declared constraints, actuator result, domain verifier, Universal Outcome Envelope, and settlement path to agree. If one of those parts is missing, the feature is partial, not MECCA-complete.
-
 **Honest frame:** Rozi X MECCA is a serious local-first cognitive architecture under active construction. It should not be read as finished AGI, a sentient being, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or a proven first-ever scientific discovery.
 
-**Scope note:** Detailed implementation workflows, builder checklists, and operator runbooks are maintained privately. This public document covers architecture, current capabilities, public-safe evidence, and claim boundaries.
+**Scope note:** This page covers architecture, current capabilities, public evidence, and honest limits. Day-to-day operating runbooks stay private.
 
 **Last public refresh:** 2026-07-14.
