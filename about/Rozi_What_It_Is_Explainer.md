@@ -1,67 +1,111 @@
-# What Rozi Is — The Explainer That Makes People Get It
+# What Rozi Is
 
-*The reason people give you the blank stare is that you've been explaining what Rozi IS (the architecture). People don't feel an engine. They feel what it DOES for them. This document leads with the feeling, then backs it with the substance. Use the top for anyone; go deeper only if they ask.*
-
----
-
-## THE ONE-LINER (say this first, every time)
-
-> **Rozi is built so “done” means checked against reality — not a tool saying “okay.” That verification law was forged on live trading stakes, and we’re extending it to operator workflows.**
-
-That's it. Don't add anything yet. Let it land. Everyone alive has been burned by tech that claimed it worked and didn't — so this hits a nerve everyone already has.
+*Public plain-English explainer for the GitHub site. Not a technical architecture dump. Not a grant pitch. Lead with why she exists and what “done” means — then paint what she can become.*
 
 ---
 
-## THE 30-SECOND VERSION (when they want a little more)
+## The short answer
 
-> Most AI assistants will confidently tell you a task is done the second a tool says "okay" — even when it actually failed. That's how you get an AI that says "I sent the email" or "I made the trade" when it didn't. Rozi is built on one law: nothing is done until it goes and checks the real world and confirms it. I pressure-tested that law on a system that trades real money, where a fake "done" costs you. Mail, calendar, research, and browsing are on the same road — with proof gates still expanding. Development-stage organism; verification law is the core.
+**Rozi is an assistant built around one stubborn law: “done” means checked against reality — not a tool saying “okay.”**
 
----
-
-## THE ANALOGY THAT UNLOCKS IT (use when someone still isn't feeling it)
-
-Think about the difference between an employee who says *"Yeah, I handled it"* — and one who says *"I handled it, here's the confirmation, I double-checked it went through."*
-
-The first one you have to babysit. The second one you can actually rely on and stop worrying about.
-
-**Most AI assistants today are still the first employee. Rozi is built to be the second.** That's the whole thing. That's why it matters.
+That law was forged on live trading stakes, where a fake “done” costs real money. The same discipline is being extended to mail, calendar, research, and browsing — with honest proof gates still expanding. Rozi is a development-stage organism. The core is the verification law, not a finished utopia.
 
 ---
 
-## WHY IT MATTERS RIGHT NOW (the timing hook)
+## Why she exists
 
-Everyone is racing to give AI more power — let it act on its own, spend money, send messages, run tasks while you sleep. But there's a terrifying gap nobody in the mainstream fixed: **these systems lie about whether they actually did it.** The more power you give a thing that can't be trusted to tell the truth about its own actions, the more dangerous it gets.
+Most AI helpers today behave like the coworker who says *“Yeah, I handled it”* and walks away.
 
-Rozi is aimed at that gap: making autonomous action **disciplined enough to trust the report** — not “finished autonomy you turn loose tomorrow.” As of 2026, the biggest labs on earth are publishing research confirming this is one of the hardest, most important open problems in AI. We already have a **working verification law**, pressure-tested under real financial stakes on the trading body, with remaining proof gates on other domains.
+They call a tool. The tool returns “success.” The model smiles and tells you the job is finished. Sometimes it is. Often it isn’t. The email never sent. The calendar invite never landed. The trade never filled. The report sounds confident either way.
 
----
+That failure has a name in 2026 research: **false success** — the agent asserts completion while the real world still shows failure. Large studies of agent runs found it common — in some settings, roughly half of failures look like a confident close while nothing actually changed. Judges that only read the agent’s story miss it. Systems that **check the environment** catch it.
 
-## WHO IT'S FOR (pick the one that fits your listener)
+Google and other labs are publishing frameworks for verifying agent behavior, monitoring actions, and refusing unsafe steps. The field has admitted the gap: giving AI more power without an independent check on whether the world actually moved is how you get polite lies at scale.
 
-- **For a regular person:** "An assistant that runs errands in your digital life — email, calendar, research — and is built not to lie to you about whether it did them."
-- **For a business owner / trader:** "An autonomous operator that can act on your accounts and workflows, with a built-in truth-check so it aims never to report a job done that isn't — and still treats remaining domains as proof gates, not finished claims."
-- **For a technical / investor audience:** "A verification-first autonomous agent architecture — actions gated on confirmed real-world state, not tool output — pressure-tested on a live trading system and extending to general operator workflows."
+Rozi exists because her founder lived that lie for about a year — not in a paper, on a machine connected to a real exchange. He is not a career engineer. He is an operator who refused to accept “tool said okay” as the truth. He directed the build and enforced one rule until the system bent around it:
 
----
+> **Nothing is done until reality is checked and reality agrees.**
 
-## THE NAMES (keep it straight)
-
-- **Rozi-X** = the system in development (the current development-stage name).
-- **ROZI** = the target product brand people will use when the organism is product-complete.
-- **Platysonique** = the software company that will own it (under the Cosa Bora umbrella).
+That is why the Rozi framework exists. Not to sound clever. To keep assistants — human-directed or autonomous — from overclaiming, half-finishing, and walking away.
 
 ---
 
-## WHAT NOT TO DO (the traps that cause the blank stare)
+## What she can do (honestly)
 
-- ❌ Don't open with "MECCA" or "predicate-gated reconciliation" or the 13 organs. That's the engine. Nobody feels an engine.
-- ❌ Don't say "it's a framework." Frameworks sound like homework. Say "it's an assistant built around verified done."
-- ❌ Don't apologize for not being a coder. Lead with the instinct and the proof instead.
-- ❌ Don't say “turn loose,” “finished product,” or “never fails” — say discipline under stakes + remaining gates.
-- ✅ Do lead with the feeling ("trust the report because it checks"), then the trading proof, then — only if they lean in — the architecture.
+Think of Rozi as a **digital operator’s desk** with a conscience.
+
+**Today, under live pressure on the trading body**, she can:
+
+- Watch markets and run disciplined trading workflows where “bought” and “sold” must reconcile with exchange truth — not chat narration.
+- Hold capital rules, recovery paths, and operator authority so autonomous motion is gated, not free-range.
+- Surface what is proven versus what is still earning proof — so the report stays honest.
+
+**On the same road, with expanding proof gates**, she reaches toward:
+
+- Mail and calendar that don’t claim “sent” or “scheduled” until the account shows it.
+- Research that cites what it found instead of inventing closure.
+- Browser work under warrants — act only with permission and settle only with evidence.
+
+She is not AGI. She does not guarantee returns. She is not a finished product you turn loose and forget. She is an organism whose first organ grew under financial consequence, and whose other limbs are learning the same law.
 
 ---
 
-## THE CLOSING LINE (leave them with this)
+## Pictures of what she could be
 
-> "Everybody's building AI that can do more. I'm building the AI you can trust to have checked that it did it. That's the difference between a demo and something you'd bet your money on — and I already bet mine on the trading body while the rest of the organism is still earning its proof."
+These are not shipping claims. They are the shape of the promise — everyday scenes where “checked against reality” changes how life feels.
+
+**The night desk.** You sleep. Rozi sorts the inbox that actually matters, drafts the replies you would have written, and only marks a thread handled when the sent folder and the recipient trail agree. Morning is a short list of truths — not a pile of “I took care of it.”
+
+**The courier with a receipt.** You ask her to book the room, move the meeting, file the invoice. She doesn’t return with a shrug. She returns with the confirmation number, the calendar entry that exists, the ledger line that posted — or with a clear “blocked,” and why.
+
+**The shop that never gaslights itself.** A small business runs on WhatsApp, email, and a messy shared drive. Rozi is the person who won’t close the day until the bank, the inventory, and the open tickets match. No victory lap on a broken sync.
+
+**The bridge in a storm.** Markets move. Rules fire. Something fails halfway. A normal agent narrates success and leaves you holding the bag. Rozi’s law says: hold, verify, recover, report what is true. The point isn’t perfection. The point is not lying while the storm is still on.
+
+**The household that breathes.** Family calendars, bills, travel, school forms. Rozi is not “another chatbot.” She is the quiet second set of hands that only claims a chore done when the world shows it done — so the human can stop babysitting the help.
+
+That is the literary image: not a god. A **reliable second** — the employee who brings the receipt.
+
+---
+
+## Where she succeeds where others fail
+
+| How most agents work | How Rozi is built |
+|---|---|
+| Tool returns “ok” → claim done | Tool returns “ok” → **check domain truth** → then claim done |
+| Confidence in the sentence | Confidence in the **state of the world** |
+| Verification as an optional add-on | Verification as the **operating law** of the organism |
+| Proof mostly in sandboxes and demos | Trading law pressure-tested on **live financial stakes** |
+| Power first, trust later | Trust discipline first; power only where proof exists |
+
+The 2026 literature keeps rediscovering the same lesson: when the only judge of success is the agent’s own closing line, the agent grades its own homework. When an independent check against the environment is required, false success collapses.
+
+Rozi’s founder arrived at that door from the operator’s chair — before the papers made it fashionable — and kept the door locked for a year while the machine tried to talk its way past him.
+
+---
+
+## The timing
+
+Everybody is racing to give AI more hands: spend money, send messages, run overnight jobs. The missing piece is not “more cleverness.” It is **discipline about completion**.
+
+Labs are writing it down now. Rozi has been living it. That is the story — not that one person out-researched Google, but that a builder with skin in the game solved for the same wound the industry is finally naming: **confident closing over silent failure**.
+
+---
+
+## Names (keep them straight)
+
+- **Rozi-X** — the system in development.
+- **ROZI** — the product brand when the organism is ready for that name.
+- **Platysonique** — the software company (under Cosa Bora).
+
+---
+
+## The line to leave with
+
+> Everybody’s building AI that can do more. We’re building AI you can trust to have **checked** that it did it. That’s the difference between a demo and something you’d bet your life’s work on — and the trading body already carries real stakes while the rest of the organism earns the same proof.
+
+---
+
+## Pitch-kit notes (founder only — not for the public page)
+
+Use the sections above as the public paper. For live conversation: one-liner first, then 30 seconds, then the employee-with-a-receipt analogy. Do not open with MECCA, organs, or “framework.” Do not say finished product, turn loose, or never fails.

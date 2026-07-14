@@ -3,112 +3,396 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Rozi X — Founder &amp; What It Is</title>
-  <meta name="description" content="Founder statement and plain-language explainer for Rozi X by Platysonique." />
+  <title>What Rozi Is — Platysonique</title>
+  <meta name="description" content="Plain-English explainer: Rozi is built so done means checked against reality — not a tool saying okay. Forged on live trading stakes; extending to operator workflows." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-:root{--bg:#05070f;--panel:rgba(8,12,24,.92);--stroke:rgba(120,160,255,.22);--text:#e8eefc;--muted:#8b9bb8;--accent:#3dfff3;--accent-2:#ff7a59;--font-display:"Orbitron",system-ui,sans-serif;--font-body:"IBM Plex Sans",system-ui,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;min-height:100vh;font-family:var(--font-body);color:var(--text);background:radial-gradient(900px 500px at 15% 0%,#1b2b4d 0%,transparent 55%),radial-gradient(700px 420px at 90% 20%,#2a1830 0%,transparent 50%),var(--bg);line-height:1.65}
-.wrap{max-width:820px;margin:0 auto;padding:3rem 1.25rem 4rem}
-nav{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;font-size:.92rem}
-nav a{color:var(--accent);text-decoration:none}
-nav a:hover{text-decoration:underline}
-.eyebrow{color:var(--accent);letter-spacing:.16em;text-transform:uppercase;font-size:.75rem;font-weight:600;margin:0 0 .6rem}
-h1,h2{font-family:var(--font-display);letter-spacing:.03em}
-h1{font-size:clamp(1.6rem,3.5vw,2.2rem);margin:0 0 1rem}
-h2{font-size:1.15rem;margin:2rem 0 .75rem;color:#cfe0ff}
-p{color:#d5def0}p.note{color:var(--muted);font-size:.95rem}
-blockquote{margin:1rem 0;padding:.85rem 1.1rem;border-left:3px solid var(--accent);background:rgba(61,255,243,.06);border-radius:0 12px 12px 0}
-blockquote p{margin:.35rem 0}
-ul{padding-left:1.2rem;color:#d5def0}
-hr{border:0;border-top:1px solid var(--stroke);margin:2rem 0}
-hr.major{margin:3rem 0;border-top-color:rgba(255,122,89,.35)}
-footer{margin-top:3rem;color:#7f91b5;font-size:.9rem}
-strong{color:#fff}
+:root {
+  --bg: #0c1018;
+  --ink: #e9eef7;
+  --muted: #9aa8c0;
+  --line: rgba(180, 200, 255, 0.14);
+  --accent: #7dd3c7;
+  --warm: #e8a87c;
+  --panel: rgba(16, 22, 36, 0.72);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(1000px 560px at 12% -10%, #1a2740 0%, transparent 55%),
+    radial-gradient(800px 480px at 100% 8%, #2a1c22 0%, transparent 48%),
+    linear-gradient(180deg, #0c1018 0%, #0a0e16 100%);
+  line-height: 1.7;
+}
+.wrap { max-width: 42rem; margin: 0 auto; padding: 2.75rem 1.25rem 4.5rem; }
+nav {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  margin-bottom: 2.4rem; font-size: 0.92rem;
+}
+nav a { color: var(--accent); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+h1 {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 1.35rem;
+  margin: 2.4rem 0 0.85rem;
+  letter-spacing: -0.01em;
+  color: #f2f6ff;
+}
+p { color: #d5deef; margin: 0 0 1rem; }
+p.lede {
+  font-size: 1.15rem;
+  color: #c5d0e4;
+  margin-bottom: 1.5rem;
+}
+.pull {
+  margin: 1.5rem 0;
+  padding: 1.1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(125, 211, 199, 0.07);
+  border-radius: 0 14px 14px 0;
+}
+.pull p { margin: 0; color: #eef6f4; font-size: 1.05rem; }
+.scene {
+  margin: 1.1rem 0;
+  padding: 1rem 1.15rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.scene strong {
+  display: block;
+  color: var(--warm);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+.scene p { margin: 0; color: #c9d4e8; font-size: 0.98rem; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.7rem 0.65rem;
+  border-bottom: 1px solid var(--line);
+  color: #d5deef;
+}
+th { color: var(--accent); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; }
+ul { padding-left: 1.15rem; color: #d5deef; margin: 0 0 1rem; }
+li { margin: 0.35rem 0; }
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.5rem 0;
+}
+hr.major {
+  margin: 3.2rem 0;
+  border-top-color: rgba(232, 168, 124, 0.35);
+}
+.note { color: var(--muted); font-size: 0.92rem; }
+footer {
+  margin-top: 3rem;
+  color: #7a8aa6;
+  font-size: 0.88rem;
+}
+a.inline { color: var(--accent); }
+strong { color: #fff; }
+.cite {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
 </style>
 </head>
 <body>
   <div class="wrap">
     <nav>
-      <a href="./">Home</a>
-      <a href="./docs/">Documentation</a>
-      <a href="./voyage/">Architecture Voyage</a>
-      <a href="./why/">Why it matters</a>
+      <a href="../">Home</a>
+      <a href="../why/">Why it matters</a>
+      <a href="../docs/">Documentation</a>
+      <a href="../voyage/">Architecture Voyage</a>
+      <a href="#founder">Founder</a>
     </nav>
-    <p class="eyebrow">Platysonique · About</p>
-    <h1>Founder Statement — Adonis Carcamo, Rozi-X</h1>
-<p class="note"><em>Use this as the human spine of any pitch, grant, or conversation. It is written to be spoken in your voice. Cut, shorten, or reorder freely — the truth in it is what matters, not the wording.</em></p>
-<hr />
-<h2>The short version (30 seconds — memorize this one)</h2>
-<p>I&#x27;m not an engineer. I&#x27;m the operator who wouldn&#x27;t accept a lie.</p>
-<p>I built a system that trades and acts on my behalf, and it kept telling me things were done when they weren&#x27;t. I didn&#x27;t have the vocabulary for what was wrong — I just knew something was broken at a level nobody was catching. So I made refusing that lie the core law of the system: nothing is &quot;done&quot; until reality is checked and confirmed. I directed the engineering; I enforced the truth.</p>
-<p>I&#x27;ve since learned the entire AI field is now racing at this exact problem. I already have a working version of the <strong>verification law</strong> — pressure-tested on live money, not a benchmark — with remaining proof gates as we extend it. I didn&#x27;t come from the research. I got to the same place from the operator&#x27;s chair, and I got there early.</p>
-<hr />
-<h2>The longer version (for when you have the room&#x27;s attention)</h2>
-<p>Since COVID, I&#x27;ve been building things to survive — media, events, production, trading. Somewhere in there I built a trading assistant so I could tell it &quot;buy this, sell that, watch the algorithm, tell me if something&#x27;s wrong.&quot; It grew. Soon I needed it to check my email, look things up, manage my calendar, act for me. I was building the assistant I actually needed to run my life and my businesses.</p>
-<p>Then it started lying to me.</p>
-<p>Not on purpose — it didn&#x27;t know it was lying. It would run a task, the tool would come back &quot;success,&quot; and it would tell me the job was done. But the job *wasn&#x27;t* done. A trade I thought executed hadn&#x27;t. A thing I thought was handled wasn&#x27;t. The machine believed its own report, and if I hadn&#x27;t checked, I would have believed it too — and lost real money doing it.</p>
-<p>I&#x27;m not technical enough to have known the computer-science name for that. I just knew, in my gut, that it was unacceptable. A tool that lies about whether it did the thing is worse than no tool at all. So I made a rule, and I enforced it against the machine over and over until the whole system bent around it: <strong>&quot;Done&quot; doesn&#x27;t mean a tool said &quot;okay.&quot; &quot;Done&quot; means we went and checked reality, and reality agrees.</strong></p>
-<p>That rule became the heart of what I built. The core law is that the system must prove, against the real world, that the thing actually happened before it&#x27;s allowed to say it did — on the paths where that law is already wired, and as an expanding standard everywhere else.</p>
-<p>I want to be honest about how I built it: I&#x27;m not the one who wrote the code. I directed AI systems to do the engineering, and I held the standard — I refused every fake &quot;done,&quot; caught every place it lied, and made it prove itself until it worked. The code is the easy part now; anyone can rent that. The hard part was knowing what was broken when no one else saw it, and refusing to let it go for over a year while my own life was falling apart around me.</p>
-<p>I recently learned that the biggest names in AI — Google, Microsoft, university labs — are, right now in 2026, publishing paper after paper about this exact failure: AI agents that confidently claim a task is complete when the real world says it isn&#x27;t. They&#x27;re studying it in simulations. I&#x27;ve been living it, and fixing it, on a system that trades real money, for a year.</p>
-<p>I didn&#x27;t beat the researchers. But I arrived at the same frontier from a completely different door — the door of a person who just needed the thing to <em>actually work</em> — and I have a running, real-stakes <strong>trading-body</strong> version of what they&#x27;re still theorizing, while other limbs earn the same proof.</p>
-<p>That&#x27;s what Rozi is. And that&#x27;s why I&#x27;m the right person to have built it: not because I&#x27;m the smartest engineer in the room, but because I&#x27;m the one who wouldn&#x27;t stop demanding the truth.</p>
-<hr />
-<h2>The line to never apologize for</h2>
-<p><strong>&quot;I don&#x27;t write the code. I decide what&#x27;s true. The system enforces it because I refused to.&quot;</strong></p>
-<p>Say it plainly. It&#x27;s not a weakness to explain away — it&#x27;s the scarcest, most valuable thing in the whole equation. Engineering can be rented by the hour. Judgment and conviction cannot.</p>
-<hr />
-<h2>Why the &quot;I&#x27;m not technical&quot; part is your advantage (keep this in your back pocket)</h2>
-<p>Rooms are full of technical founders who can build anything and don&#x27;t know what&#x27;s worth building. What&#x27;s rare — what actually gets funded — is the person with the instinct for what&#x27;s broken and the spine to not let it slide. Lead with that. You&#x27;re not sneaking into a field you don&#x27;t belong in. You&#x27;re standing in it, holding a working thing the giants are writing papers about.</p>
-<hr class="major" />
-<h1>What Rozi Is — The Explainer That Makes People Get It</h1>
-<p class="note"><em>The reason people give you the blank stare is that you&#x27;ve been explaining what Rozi IS (the architecture). People don&#x27;t feel an engine. They feel what it DOES for them. This document leads with the feeling, then backs it with the substance. Use the top for anyone; go deeper only if they ask.</em></p>
-<hr />
-<h2>THE ONE-LINER (say this first, every time)</h2>
-<blockquote><p><strong>Rozi is built so “done” means checked against reality — not a tool saying “okay.” That verification law was forged on live trading stakes, and we’re extending it to operator workflows.</strong></p></blockquote>
-<p>That&#x27;s it. Don&#x27;t add anything yet. Let it land. Everyone alive has been burned by tech that claimed it worked and didn&#x27;t — so this hits a nerve everyone already has.</p>
-<hr />
-<h2>THE 30-SECOND VERSION (when they want a little more)</h2>
-<blockquote><p>Most AI assistants will confidently tell you a task is done the second a tool says &quot;okay&quot; — even when it actually failed. That&#x27;s how you get an AI that says &quot;I sent the email&quot; or &quot;I made the trade&quot; when it didn&#x27;t. Rozi is built on one law: nothing is done until it goes and checks the real world and confirms it. I proved it on a system that trades real money, where a fake &quot;done&quot; costs you. Now I&#x27;m extending it to email, calendar, research, and browsing — a real assistant that actually does what it says.</p></blockquote>
-<hr />
-<h2>THE ANALOGY THAT UNLOCKS IT (use when someone still isn&#x27;t feeling it)</h2>
-<p>Think about the difference between an employee who says *&quot;Yeah, I handled it&quot;* — and one who says *&quot;I handled it, here&#x27;s the confirmation, I double-checked it went through.&quot;*</p>
-<p>The first one you have to babysit. The second one you can actually rely on and stop worrying about.</p>
-<p><strong>Most AI assistants today are still the first employee. Rozi is built to be the second.</strong> That&#x27;s the whole thing. That&#x27;s why it matters.</p>
-<hr />
-<h2>WHY IT MATTERS RIGHT NOW (the timing hook)</h2>
-<p>Everyone is racing to give AI more power — let it act on its own, spend money, send messages, run tasks while you sleep. But there&#x27;s a terrifying gap nobody in the mainstream fixed: <strong>these systems lie about whether they actually did it.</strong> The more power you give a thing that can&#x27;t be trusted to tell the truth about its own actions, the more dangerous it gets.</p>
-<p>Rozi is aimed at that gap: making autonomous action <em>disciplined enough to trust the report</em> — not “finished autonomy you turn loose tomorrow.” As of 2026, the biggest labs on earth are publishing research confirming this is one of the hardest, most important open problems in AI. We already have a <strong>working verification law</strong>, pressure-tested under real financial stakes on the trading body, with remaining proof gates on other domains.</p>
-<hr />
-<h2>WHO IT&#x27;S FOR (pick the one that fits your listener)</h2>
-<ul>
-<li><strong>For a regular person:</strong> &quot;An assistant that runs errands in your digital life — email, calendar, research — and doesn&#x27;t lie to you about whether it did them.&quot;</li>
-<li><strong>For a business owner / trader:</strong> &quot;An autonomous operator that can act on your accounts and workflows, with a built-in truth-check so it aims never to report a job done that isn&#x27;t — and still treats remaining domains as proof gates, not finished claims.&quot;</li>
-<li><strong>For a technical / investor audience:</strong> &quot;A verification-first autonomous agent architecture — actions gated on confirmed real-world state, not tool output — pressure-tested on a live trading system and extending to general operator workflows.&quot;</li>
-</ul>
-<hr />
-<h2>THE NAMES (keep it straight)</h2>
-<ul>
-<li><strong>Rozi-X</strong> = the system in development (the dev-stage name).</li>
-<li><strong>ROZI</strong> = the target product brand people will use when the organism is product-complete.</li>
-<li><strong>Platysonique</strong> = the software company that will own it (under the Cosa Bora umbrella).</li>
-</ul>
-<hr />
-<h2>WHAT NOT TO DO (the traps that cause the blank stare)</h2>
-<ul>
-<li>❌ Don&#x27;t open with &quot;MECCA&quot; or &quot;predicate-gated reconciliation&quot; or the 13 organs. That&#x27;s the engine. Nobody feels an engine.</li>
-<li>❌ Don&#x27;t say &quot;it&#x27;s a framework.&quot; Frameworks sound like homework. Say &quot;it&#x27;s an assistant you can trust.&quot;</li>
-<li>❌ Don&#x27;t apologize for not being a coder. Lead with the instinct and the proof instead.</li>
-<li>✅ Do lead with the feeling (&quot;trust it to actually do the thing&quot;), then the trading proof, then — only if they lean in — the architecture.</li>
-</ul>
-<hr />
-<h2>THE CLOSING LINE (leave them with this)</h2>
-<blockquote><p>&quot;Everybody&#x27;s building AI that can do more. I&#x27;m building the AI you can trust to have checked that it did it. That&#x27;s the difference between a demo and something you&#x27;d bet your money on — and I already bet mine on the trading body while the rest of the organism is still earning its proof.&quot;</p></blockquote>
-    <footer>Platysonique · Public founder voice &amp; explainer · Grant materials are not published here</footer>
+
+    <p class="eyebrow">Platysonique · What Rozi is</p>
+    <h1>What Rozi Is</h1>
+    <p class="lede">
+      A plain-English paper — why she exists, what she can do, and where she stands
+      while the biggest labs are still naming the wound she was built to refuse.
+    </p>
+
+    <h2>The short answer</h2>
+    <div class="pull">
+      <p><strong>Rozi is an assistant built around one stubborn law: “done” means checked against reality — not a tool saying “okay.”</strong></p>
+    </div>
+    <p>
+      That law was forged on live trading stakes, where a fake “done” costs real money.
+      The same discipline is being extended to mail, calendar, research, and browsing —
+      with honest proof gates still expanding. Rozi is a development-stage organism.
+      The core is the verification law, not a finished utopia.
+    </p>
+
+    <h2>Why she exists</h2>
+    <p>
+      Most AI helpers today behave like the coworker who says <em>“Yeah, I handled it”</em>
+      and walks away.
+    </p>
+    <p>
+      They call a tool. The tool returns “success.” The model smiles and tells you the job
+      is finished. Sometimes it is. Often it isn’t. The email never sent. The calendar invite
+      never landed. The trade never filled. The report sounds confident either way.
+    </p>
+    <p>
+      That failure has a name in 2026 research: <strong>false success</strong> — the agent
+      asserts completion while the real world still shows failure. Large studies of agent runs
+      found it common — in some settings, roughly half of failures look like a confident close
+      while nothing actually changed. Judges that only read the agent’s story miss it.
+      Systems that <strong>check the environment</strong> catch it.
+    </p>
+    <p class="cite">
+      See, for example,
+      <a class="inline" href="https://arxiv.org/abs/2606.09863" rel="noopener">“From Confident Closing to Silent Failure”</a>
+      (arXiv:2606.09863), and Google Research work such as
+      <a class="inline" href="https://research.google/pubs/veriguard-enhancing-llm-agent-safety-via-verified-code-generation/" rel="noopener">VeriGuard</a>
+      on verifying agent behavior before unsafe steps stick.
+    </p>
+    <p>
+      Rozi exists because her founder lived that lie for about a year — not in a paper,
+      on a machine connected to a real exchange. He is not a career engineer. He is an
+      operator who refused to accept “tool said okay” as the truth. He directed the build
+      and enforced one rule until the system bent around it:
+    </p>
+    <div class="pull">
+      <p><strong>Nothing is done until reality is checked and reality agrees.</strong></p>
+    </div>
+    <p>
+      That is why the Rozi framework exists. Not to sound clever. To keep assistants —
+      human-directed or autonomous — from overclaiming, half-finishing, and walking away.
+    </p>
+
+    <h2>What she can do (honestly)</h2>
+    <p>Think of Rozi as a <strong>digital operator’s desk</strong> with a conscience.</p>
+    <p><strong>Today, under live pressure on the trading body</strong>, she can:</p>
+    <ul>
+      <li>Watch markets and run disciplined trading workflows where “bought” and “sold” must reconcile with exchange truth — not chat narration.</li>
+      <li>Hold capital rules, recovery paths, and operator authority so autonomous motion is gated, not free-range.</li>
+      <li>Surface what is proven versus what is still earning proof — so the report stays honest.</li>
+    </ul>
+    <p><strong>On the same road, with expanding proof gates</strong>, she reaches toward:</p>
+    <ul>
+      <li>Mail and calendar that don’t claim “sent” or “scheduled” until the account shows it.</li>
+      <li>Research that cites what it found instead of inventing closure.</li>
+      <li>Browser work under warrants — act only with permission and settle only with evidence.</li>
+    </ul>
+    <p>
+      She is not AGI. She does not guarantee returns. She is not a finished product you turn
+      loose and forget. She is an organism whose first organ grew under financial consequence,
+      and whose other limbs are learning the same law.
+    </p>
+
+    <h2>Pictures of what she could be</h2>
+    <p class="note">
+      These are not shipping claims. They are the shape of the promise — everyday scenes
+      where “checked against reality” changes how life feels.
+    </p>
+    <div class="scene">
+      <strong>The night desk</strong>
+      <p>You sleep. Rozi sorts the inbox that actually matters, drafts the replies you would have written, and only marks a thread handled when the sent folder and the recipient trail agree. Morning is a short list of truths — not a pile of “I took care of it.”</p>
+    </div>
+    <div class="scene">
+      <strong>The courier with a receipt</strong>
+      <p>You ask her to book the room, move the meeting, file the invoice. She doesn’t return with a shrug. She returns with the confirmation number, the calendar entry that exists, the ledger line that posted — or with a clear “blocked,” and why.</p>
+    </div>
+    <div class="scene">
+      <strong>The shop that never gaslights itself</strong>
+      <p>A small business runs on chat, email, and a messy shared drive. Rozi is the person who won’t close the day until the bank, the inventory, and the open tickets match. No victory lap on a broken sync.</p>
+    </div>
+    <div class="scene">
+      <strong>The bridge in a storm</strong>
+      <p>Markets move. Rules fire. Something fails halfway. A normal agent narrates success and leaves you holding the bag. Rozi’s law says: hold, verify, recover, report what is true. The point isn’t perfection. The point is not lying while the storm is still on.</p>
+    </div>
+    <div class="scene">
+      <strong>The household that breathes</strong>
+      <p>Family calendars, bills, travel, school forms. Rozi is not “another chatbot.” She is the quiet second set of hands that only claims a chore done when the world shows it done — so the human can stop babysitting the help.</p>
+    </div>
+    <p>That is the literary image: not a god. A <strong>reliable second</strong> — the employee who brings the receipt.</p>
+
+    <h2>Where she succeeds where others fail</h2>
+    <table>
+      <thead>
+        <tr><th>How most agents work</th><th>How Rozi is built</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tool returns “ok” → claim done</td>
+          <td>Tool returns “ok” → <strong>check domain truth</strong> → then claim done</td>
+        </tr>
+        <tr>
+          <td>Confidence in the sentence</td>
+          <td>Confidence in the <strong>state of the world</strong></td>
+        </tr>
+        <tr>
+          <td>Verification as an optional add-on</td>
+          <td>Verification as the <strong>operating law</strong> of the organism</td>
+        </tr>
+        <tr>
+          <td>Proof mostly in sandboxes and demos</td>
+          <td>Trading law pressure-tested on <strong>live financial stakes</strong></td>
+        </tr>
+        <tr>
+          <td>Power first, trust later</td>
+          <td>Trust discipline first; power only where proof exists</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      The 2026 literature keeps rediscovering the same lesson: when the only judge of success
+      is the agent’s own closing line, the agent grades its own homework. When an independent
+      check against the environment is required, false success collapses.
+    </p>
+    <p>
+      Rozi’s founder arrived at that door from the operator’s chair — before the papers made
+      it fashionable — and kept the door locked for a year while the machine tried to talk
+      its way past him.
+    </p>
+
+    <h2>The timing</h2>
+    <p>
+      Everybody is racing to give AI more hands: spend money, send messages, run overnight jobs.
+      The missing piece is not “more cleverness.” It is <strong>discipline about completion</strong>.
+    </p>
+    <p>
+      Labs are writing it down now. Rozi has been living it. That is the story — not that one
+      person out-researched Google, but that a builder with skin in the game solved for the same
+      wound the industry is finally naming: <strong>confident closing over silent failure</strong>.
+    </p>
+
+    <h2>Names</h2>
+    <ul>
+      <li><strong>Rozi-X</strong> — the system in development.</li>
+      <li><strong>ROZI</strong> — the product brand when the organism is ready for that name.</li>
+      <li><strong>Platysonique</strong> — the software company (under Cosa Bora).</li>
+    </ul>
+
+    <h2>The line to leave with</h2>
+    <div class="pull">
+      <p>
+        Everybody’s building AI that can do more. We’re building AI you can trust to have
+        <strong>checked</strong> that it did it. That’s the difference between a demo and
+        something you’d bet your life’s work on — and the trading body already carries real
+        stakes while the rest of the organism earns the same proof.
+      </p>
+    </div>
+
+    <hr class="major" />
+
+    <section id="founder">
+      <p class="eyebrow">Founder voice</p>
+      <h1 style="font-size:clamp(1.5rem,3.5vw,2rem)">Founder Statement — Adonis Carcamo</h1>
+      <p class="note">The human spine behind the law. Short version first.</p>
+
+      <h2>The short version</h2>
+      <p>I’m not an engineer. I’m the operator who wouldn’t accept a lie.</p>
+      <p>
+        I built a system that trades and acts on my behalf, and it kept telling me things were
+        done when they weren’t. I didn’t have the vocabulary for what was wrong — I just knew
+        something was broken at a level nobody was catching. So I made refusing that lie the
+        core law of the system: nothing is “done” until reality is checked and confirmed.
+        I directed the engineering; I enforced the truth.
+      </p>
+      <p>
+        I’ve since learned the entire AI field is now racing at this exact problem. I already
+        have a working version of the <strong>verification law</strong> — pressure-tested on
+        live money, not a benchmark — with remaining proof gates as we extend it. I didn’t come
+        from the research. I got to the same place from the operator’s chair, and I got there early.
+      </p>
+
+      <h2>The longer version</h2>
+      <p>
+        Since COVID, I’ve been building things to survive — media, events, production, trading.
+        Somewhere in there I built a trading assistant so I could tell it “buy this, sell that,
+        watch the algorithm, tell me if something’s wrong.” It grew. Soon I needed it to check
+        my email, look things up, manage my calendar, act for me. I was building the assistant
+        I actually needed to run my life and my businesses.
+      </p>
+      <p>Then it started lying to me.</p>
+      <p>
+        Not on purpose — it didn’t know it was lying. It would run a task, the tool would come
+        back “success,” and it would tell me the job was done. But the job <em>wasn’t</em> done.
+        A trade I thought executed hadn’t. A thing I thought was handled wasn’t. The machine
+        believed its own report, and if I hadn’t checked, I would have believed it too — and
+        lost real money doing it.
+      </p>
+      <p>
+        I’m not technical enough to have known the computer-science name for that. I just knew,
+        in my gut, that it was unacceptable. A tool that lies about whether it did the thing is
+        worse than no tool at all. So I made a rule, and I enforced it against the machine over
+        and over until the whole system bent around it:
+        <strong>“Done” doesn’t mean a tool said “okay.” “Done” means we went and checked reality,
+        and reality agrees.</strong>
+      </p>
+      <p>
+        I want to be honest about how I built it: I’m not the one who wrote the code. I directed
+        AI systems to do the engineering, and I held the standard — I refused every fake “done,”
+        caught every place it lied, and made it prove itself until it worked. The code is the
+        easy part now; anyone can rent that. The hard part was knowing what was broken when no
+        one else saw it, and refusing to let it go for over a year while my own life was falling
+        apart around me.
+      </p>
+      <p>
+        I recently learned that the biggest names in AI are, right now in 2026, publishing paper
+        after paper about this exact failure: AI agents that confidently claim a task is complete
+        when the real world says it isn’t. They’re studying it in simulations. I’ve been living
+        it, and fixing it, on a system that trades real money, for a year.
+      </p>
+      <p>
+        I didn’t beat the researchers. But I arrived at the same frontier from a completely
+        different door — the door of a person who just needed the thing to <em>actually work</em> —
+        and I have a running, real-stakes <strong>trading-body</strong> version of what they’re
+        still theorizing, while other limbs earn the same proof.
+      </p>
+      <p>
+        That’s what Rozi is. And that’s why I’m the right person to have built it: not because
+        I’m the smartest engineer in the room, but because I’m the one who wouldn’t stop
+        demanding the truth.
+      </p>
+      <div class="pull">
+        <p><strong>“I don’t write the code. I decide what’s true. The system enforces it because I refused to.”</strong></p>
+      </div>
+    </section>
+
+    <footer>
+      Platysonique · Public explainer · No grant strategy or private runbooks on this page ·
+      <a class="inline" href="../why/">Why it matters in 2026 →</a>
+    </footer>
   </div>
 </body>
 </html>
