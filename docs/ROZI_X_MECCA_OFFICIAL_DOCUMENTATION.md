@@ -2,25 +2,26 @@
 
 ## Document Status
 
-**Status:** official architecture overview and investor-facing technical handoff, grounded in current repository evidence, internal research, implemented substrate code, capability-organ implementation evidence, and live runtime proof where explicitly stated.
+**What this document is:** The public architecture story for Rozi X MECCA — a living handoff for people who want to understand the project without reading the private codebase. It is written for builders, operators, and diligence readers.
 
-**Audience:** builders, operators, and diligence readers. Plain-language capability examples appear in **What Rozi Can Do In Real Life**; architecture depth and claim boundaries remain intact elsewhere.
+**Living document:** This page is updated as the architecture develops. When new capabilities are implemented and ready to describe publicly, they are reflected here. Treat each refresh as a current snapshot of the public architecture narrative, not a one-time frozen brochure.
 
-**Canonical rule:** this document describes the Rozi X MECCA architecture as it currently exists and as it is being hardened. It does not override verified code, proprietary internal truth records, or live runtime evidence.
+**What it is for:** To explain what Rozi X MECCA is aiming to be, what already exists in working form, how the major pieces fit together, and where honest claim boundaries sit. Plain-language capability examples appear in **What Rozi Can Do In Real Life**; deeper architecture sections carry the technical shape.
 
-**Public-document scope:** implementation workflow, builder checklists, operator runbooks, and doc-update procedures are governed by proprietary internal manuals. This document presents architecture, current capabilities, public-safe evidence, investor-safe positioning, and claim boundaries.
+**How to use it:** Read it as orientation and evidence-backed overview. Later sections carry the substance. Where work is still in progress, this document says so rather than overselling.
 
 **MECCA non-substitution law:** no implementation may substitute prompt instructions, model judgment, tool success, scheduler dispatch, idempotency replay, cached state, hardcoded tool-name lists, or internal state-machine flags for substrate truth. Substrate truth requires the active intent, current authority, declared constraints, actuator result, domain verifier, Universal Outcome Envelope, and settlement path to agree. If one of those parts is missing, the feature is partial, not MECCA-complete.
 
-**Boundary:** Rozi X MECCA must not be described as a finished artificial general intelligence, a sentient being, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or a proven first-ever scientific discovery. It is a serious local-first cognitive architecture under active construction, with implemented substrate pieces and remaining proof gates.
+**Honest frame:** Rozi X MECCA is a serious local-first cognitive architecture under active construction. It should not be read as finished AGI, a sentient being, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or a proven first-ever scientific discovery.
 
-**Last public refresh:** 2026-07-12.
+**Scope note:** Detailed implementation workflows, builder checklists, and operator runbooks are maintained privately. This public document covers architecture, current capabilities, public-safe evidence, and claim boundaries.
+
+**Last public refresh:** 2026-07-14.
 
 ---
-
 ## Abstract
 
-**In one line:** Rozi is built so “done” means checked against reality — not a tool saying “okay.” That verification law was forged on live trading stakes, and we’re extending it to operator workflows.
+**In one line:** Rozi is built so “done” means checked against reality — not a tool saying “okay.” That verification law was forged on live trading stakes, then extended to operator workflows.
 
 Most assistants will confidently report completion the moment a tool returns "okay," even when the real world never changed. Rozi X MECCA is built so that kind of false success is illegal by architecture: tools are actuators, not truth. Completion requires domain verification against reality — the difference between an employee who says "I handled it" and one who shows confirmation.
 
@@ -36,22 +37,21 @@ This architecture synthesizes established ideas: cybernetics, control theory, MA
 
 The practical framing is simpler: **MECCA is the framework**. The model is a replaceable brain. The workflows — intent contracts, tool actuation under Guardian, domain verification, outcome envelopes, settlement, cognitive blackboard metabolism, and interruptible thought drafts — are what turn a capable language model into a disciplined assistant organism instead of a chat window that hopes the next token is enough.
 
-**Founder pull-quote (public):** *"I don't write the code. I decide what's true. The system enforces it because I refused to."* — Adonis Carcamo
 
 ---
 
-## Why this matters in 2026 (public differentiation)
+## Why this matters in 2026
 
 False completion — agents asserting "done" when environment state disagrees — is an active research frontier in 2026. Labs publish verifiers, monitors, and behavioral contracts; much of that work still validates in simulation and treats verification as a bolt-on guardrail.
 
-Rozi X's public differentiators (honest, investor-safe):
+Rozi X's public differentiators:
 
-1. **Integrated organism, not a bolt-on verifier.** Verified-against-reality action is the operating metabolism, not a wrapper around a chat model.
+1. **Integrated organism, not a bolt-on verifier.** Verified-against-reality action is the operating metabolism, not a verification layer bolted onto a chat model.
 2. **Live financial proving ground.** The law was forged on an exchange-connected trading workstation where a fake "done" costs real money — then extended to operator workflows (mail, calendar, research, browser under warrant).
 3. **Multi-domain continuous operator surface** under one authority membrane, not a single-benchmark demo.
 4. **Safety and capability fused.** Verification is native law, not a "verifier tax" bolted on after fluent generation.
 
-This section does **not** include grant strategy, Phase I proposal coaching, or private operator runbooks. See the public investor site About page for the founder statement and feeling-first explainer.
+For the founder statement and plain-language explainer, see the public About pages on the investor site.
 
 ---
 
@@ -69,21 +69,10 @@ Rozi X MECCA is best described as:
 
 The defensible executive claim is not that Rozi X MECCA invented every component of AI safety or that it constitutes finished AGI. The defensible claim is:
 
-> Rozi X MECCA is a novel synthesis architecture for a local-first autonomous assistant organism, built from real control, verification, learning, and security principles, with working code paths that already enforce verified predicate settlement for scheduled intent and action outcomes — and metabolic continuity for interrupted cognition — under substrate law rather than prompt hope.
+> Rozi X MECCA is a novel synthesis architecture for a local-first autonomous assistant organism, built from real control, verification, learning, and security principles, with working code paths that already enforce verified predicate settlement for scheduled intent and action outcomes — and metabolic continuity for interrupted cognition — under substrate law rather than prompt instructions alone.
 
 ---
 
-## Investor Brief
-
-This document is meant to travel. A diligence reader should leave with three truths:
-
-1. **The product is not “a chat model with plugins.”** Rozi X is a **first-party organism**: memory, authority, tools, trading body, remote channels, and verification are designed as one metabolism. The language model is a replaceable brain inside that metabolism — not the product itself.
-2. **The moat is substrate discipline.** Commodity assistants optimize for fluent answers. Rozi optimizes for **claims that survive contact with reality** — order ledgers, capital reports, mail/calendar proof, browser warrants, scheduled intents that reconcile after restart. That is harder to copy than a prompt pack, and more valuable than a larger context window.
-3. **The opportunity is portable loyalty with a live proving ground.** Kryptonite (the trading workstation) is not a distraction from the AI thesis; it is the pressure chamber that forced false-success out of the architecture. The same control plane already spans desktop chat, Telegram, research, Workspace, browser motor under warrant, and specialist coding delegation.
-
-What not to sell from this page: guaranteed returns, AGI, regulatory certification, or “handles every website / every workflow already.” What to evaluate: architecture coherence, implemented substrate, honest claim boundaries, and a body that already touches live markets and live operator work.
-
----
 
 ## Current System Footprint
 
@@ -123,10 +112,10 @@ Rozi X MECCA did not originate from a single document or model answer. It emerge
 | Investigation Arc | Name It Found | Core Unit | What The Unit Carries | Missing Piece It Identified |
 | --- | --- | --- | --- | --- |
 | Original MECCA R&D | **Contract Cognition** | Contract | claim, prediction, invariants, governance, settlement | Memory, learning, and action were still too separated. |
-| Clean-room architecture report | **Warrant Ledger / KEYSTONE** | Warrant | claim, provenance, credit bond, proof certificate, owner-auth scope | Trust needed one out-of-band Guardian and one proof/credit ledger. |
-| Blind external thread | **Reckoning Substrate** | Claim | body, prediction, provenance, calibrated confidence, links, status, reckonings | Memory and learning had to become the same object reconciled against measured outcomes. |
-| Independent second-researcher pass | **Outcome-settled memory under governance** | Verified memory / learning record | evidence, credit, authority, rollback path | The real greenfield was narrower than feared: Genome + Settlement/credit + Proof object. |
-| Phase 9 implementation | **Universal Predicate-Gated Reconciliation** | Intent job | domain, resource, predicate, constraints, time gate, authority, verifier, tool affordances, history | Action completion needed domain truth, not tool success. |
+| Independent architecture review | **Warrant Ledger** | Warrant | claim, provenance, credit bond, proof certificate, owner-auth scope | Trust needed one out-of-band Guardian and one proof/credit ledger. |
+| Independent external review | **Reckoning Substrate** | Claim | body, prediction, provenance, calibrated confidence, links, status, reckonings | Memory and learning had to become the same object reconciled against measured outcomes. |
+| Second independent research pass | **Outcome-settled memory under governance** | Verified memory / learning record | evidence, credit, authority, rollback path | The remaining build surface centered on genome, settlement/credit, and a proof object. |
+| Predicate-gated reconciliation implementation | **Universal Predicate-Gated Reconciliation** | Intent job | domain, resource, predicate, constraints, time gate, authority, verifier, tool affordances, history | Action completion needed domain truth, not tool success. |
 
 The convergence was the discovery:
 
@@ -140,7 +129,7 @@ That is the heart of MECCA.
 
 ### The Systems Venn Diagram
 
-The internal research framed the field as three overlapping circles: memory systems, learning systems, and alignment/agent-control systems. Each circle was strong in its own way. None sat in the exact center.
+Research framed the field as three overlapping circles: memory systems, learning systems, and alignment/agent-control systems. Each circle was strong in its own way. None sat in the exact center.
 
 ```text
         MEMORY SYSTEMS
@@ -466,13 +455,13 @@ Rozi X MECCA is presented here as a working architecture and capability suite. T
 | Surface | What it is |
 | --- | --- |
 | **Desktop app** | PyQt6 workstation — chat, trading panels, portfolio, charts, Settings, brain metrics. User-facing brand: **Rozi X**. |
-| **Telegram** | Remote operator channel sharing the same interactive tool surface as desktop chat. Delivery hardening covers progress during long tool loops, injecting results to the active channel, and cross-channel escalation so a desktop blocking question can reach the founder on Telegram when configured. |
+| **Telegram** | Remote operator channel sharing the same interactive tool surface as desktop chat. Delivery hardening covers progress during long tool loops, injecting results to the active channel, and cross-channel escalation so a desktop blocking question can reach a configured operator channel when enabled. |
 | **AI providers** | Pluggable backends: OpenAI, OpenRouter, Perplexity, LM Studio / OpenAI-compatible transport, local `llama_cpp`. Rozi routes factual lookups and reasoning through the configured provider; local model files are touched only when a local provider is active. |
 | **Settings** | Operator-facing toggles for organs, warrants (Workspace write access and browser-motor write access), Telegram notify, Cursor delegation, Google Workspace read/write, and trading parameters — saved through `ConfigManager` and visible to runtime gates in realtime. |
 
 ### Current Capability Portfolio
 
-**Trading and portfolio.** Rozi monitors holdings, trading cycles, market data, and portfolio health inside a real exchange-connected workstation. She can run configured autonomous trading cycles and handle liquidation workflows, but trading actions are never treated as mere chat outcomes. They pass through tool gates, engine and ledger truth, risk controls, idempotency, outcome envelopes, and domain verifiers. Exchange acknowledgement is not enough; order lifecycle, portfolio state, ledger state, and active-cycle truth must reconcile before completion may be claimed. When live prices are missing, portfolio totals must say so. Capital sustainability reporting includes an operator-facing `chat_summary` so questions like “why aren’t we buying / are we fat liquid?” get the ranked capital truth instead of improvisation. Authorized multi-step missions (for example sell then rebuy) use a substrate trade-plan limb with envelopes — not a yeah-loop of mid-plan permission theater. Recent Executions surfaces open submitted sells as well as fills so the operator console matches ledger truth.
+**Trading and portfolio.** Rozi monitors holdings, trading cycles, market data, and portfolio health inside a real exchange-connected workstation. She can run configured autonomous trading cycles and handle liquidation workflows, but trading actions are never treated as mere chat outcomes. They pass through tool gates, engine and ledger truth, risk controls, idempotency, outcome envelopes, and domain verifiers. Exchange acknowledgement is not enough; order lifecycle, portfolio state, ledger state, and active-cycle truth must reconcile before completion may be claimed. When live prices are missing, portfolio totals must say so. Capital sustainability reporting includes an operator-facing `chat_summary` so questions like “why aren’t we buying / do we have usable liquidity?” get the ranked capital truth instead of improvisation. Authorized multi-step missions (for example sell then rebuy) use a substrate trade-plan limb with envelopes — not repeated mid-plan permission prompts. Recent Executions surfaces open submitted sells as well as fills so the operator console matches ledger truth.
 
 **Universal scheduling and promises.** Rozi's future promises are not stored as loose intentions in chat. A promised future action becomes a durable scheduled intent: the desired outcome, the time or event gate, the normal target tool, and the verifier that can prove whether the state became true. Time is only the release condition. The reconciliation kernel owns the work after release: observe the gap, act if needed, verify the predicate, then settle the result. This same contract covers reminders, Telegram sends, Workspace writes, delayed trading retries, browser health checks, and post-restart continuations.
 
@@ -490,7 +479,7 @@ Rozi X MECCA is presented here as a working architecture and capability suite. T
 
 **Google Workspace.** When configured, Rozi can read and write across the owner's scoped Google services through a fixed Workspace delegation setup (Gmail, Drive, Calendar, Sheets, Docs, Slides, Contacts, and Directory when scoped). Dedicated read tools cover everyday Gmail/Drive/Calendar inspection. A **method-discovery** surface lets her browse the live Google discovery catalog (`list_workspace_methods` / `describe_workspace_method`) before calling the generic actuator — she must not invent dotted API paths. The generic `workspace_call` actuator can reach any method on any configured service, but every mutation still requires the master write warrant, Guardian authorization, idempotency, and live proof before Rozi may claim that the external state changed. High-risk Directory/admin mutations remain denylisted until explicitly armed.
 
-**Operator communication.** Rozi can communicate through desktop chat and Telegram, open a reply cycle when an answer is needed, and connect remote replies back to the local conversation. Delivery hardening includes progress signals during long tool loops, injecting results into the active channel/session, and cross-channel escalation so a desktop blocking question can reach the founder on Telegram when configured. Operator Relay stores outbound and inbound text cycles, correlates replies, and settles outcomes through warrants and label-aware scoring. Proactive notifications remain controlled by operator settings; necessary operator escalation is a separate authority path.
+**Operator communication.** Rozi can communicate through desktop chat and Telegram, open a reply cycle when an answer is needed, and connect remote replies back to the local conversation. Delivery hardening includes progress signals during long tool loops, injecting results into the active channel/session, and cross-channel escalation so a desktop blocking question can reach a configured operator channel when enabled. Operator Relay stores outbound and inbound text cycles, correlates replies, and settles outcomes through warrants and label-aware scoring. Proactive notifications remain controlled by operator settings; necessary operator escalation is a separate authority path.
 
 **Conversational intelligence and tool narration.** Rozi's visible language is meant to respond to the situation, not recite fixed status lines. Tool narration is grounded in what she is checking, what arguments were used, what the tool returned, and what happened recently. That language may be natural and flavorful, but it does not create authority, prove completion, or replace a verifier. Boot and restart awareness follow the same rule: facts are carried in a read-only context envelope and concern digest; MAIN narrates only when relevance and a new observation fingerprint justify interaction — never from hardcoded greeting scripts.
 
@@ -503,7 +492,7 @@ Rozi X MECCA is presented here as a working architecture and capability suite. T
 | **VS Code (and VS Code–compatible IDE surfaces)** | Research + integration target | IDE diagnostics, diffs, selection context, and MCP “ide” bridges so specialist agents operate inside a real editor workspace Rozi can observe and settle |
 | **Perplexity / web / shell / browser** | First-class actuators | Research and open-world action without pretending they are a multi-model Computer product |
 
-The architectural claim is **specialist amplification under substrate law**: Rozi remains the owner-loyal control plane; Cursor, Claude Code, and IDE surfaces are limbs. Proprietary internal procedures govern delivery. Public claim: gated, reviewable, never self-merging; additional harnesses are not live until membrane + probe exist.
+The architectural claim is **specialist amplification under substrate law**: Rozi remains the owner-loyal control plane; Cursor, Claude Code, and IDE surfaces are limbs. Private project procedures govern delivery. Public claim: gated, reviewable, never self-merging; additional harnesses are not live until membrane + probe exist.
 
 **Self-maintenance.** Rozi can restart herself, recover scheduled work after restart, avoid launching under the wrong Python environment, and notice meaningful startup or restart patterns as one class of organism concern among others (health flags, pending work, structured self-checks). Settings changes flow through the unified configuration manager, so gates and tools see runtime toggles without requiring a reboot for every switch. Low-signal starts are recorded quietly; meaningful starts and restarts can become natural MAIN-narrated observations when the evidence fingerprint is new.
 
@@ -511,9 +500,9 @@ The architectural claim is **specialist amplification under substrate law**: Roz
 
 Rozi is designed to prove work, not just narrate work. The difference is not one feature, one model, or one prompt. It is a **first-party control architecture** — metabolic workflows owned end-to-end by the organism — that can wrap any capable AI provider and force it to behave like a disciplined body instead of a disposable chat turn.
 
-Most consumer and “agent” products are assembled as: model + tool plugins + hope. Interrupt them mid-thought and the thought dies. Let a tool return `ok` and the model often claims victory. Swap the model and you still have the same brittle loop. Memory is a bag of embeddings. Safety is a system prompt. Trading, if present, is a bolted script. Remote chat is a second bot with a thinner tool surface. That stack can look impressive in demos; it does not survive false success, restart, or owner loyalty under pressure.
+Most consumer and “agent” products are assembled as: model + tool plugins + unverified success. Interrupt them mid-thought and the thought dies. Let a tool return `ok` and the model often claims victory. Swap the model and you still have the same brittle loop. Memory is a bag of embeddings. Safety is a system prompt. Trading, if present, is a bolted script. Remote chat is a second bot with a thinner tool surface. That stack can look impressive in demos; it does not survive false success, restart, or owner loyalty under pressure.
 
-Rozi X MECCA is built the other way around. **The brain is swappable. The metabolism is first-class and first-party.** OpenAI, OpenRouter, Perplexity, LM Studio, or local `llama_cpp` can drive language; MECCA still owns intent contracts, Guardian gates, verifiers, envelopes, settlement, blackboard continuity, Thought-draft finalization, capital/ledger truth, and warrant-gated motors. That is what makes a capable model feel formidable without lying that the model alone is the product — and why copying the chat UI does not copy the organism.
+Rozi X MECCA is built the other way around. **The brain is swappable. The metabolism is first-class and first-party.** OpenAI, OpenRouter, Perplexity, LM Studio, or local `llama_cpp` can drive language; MECCA still owns intent contracts, Guardian gates, verifiers, envelopes, settlement, blackboard continuity, Thought-draft finalization, capital/ledger truth, and warrant-gated motors. That is what keeps a capable model subordinate to substrate law — and why copying the chat UI does not copy the organism.
 
 | What commodity stacks optimize | What Rozi X MECCA owns instead |
 | --- | --- |
@@ -526,7 +515,7 @@ Rozi X MECCA is built the other way around. **The brain is swappable. The metabo
 | Prompt “remember this forever” | Durable operator-memory write path; verbal etch without it is a lie |
 | Parallel mega-model Computer theater | One local control plane + specialist harness membrane (Cursor live; peers gated) |
 
-This is not a claim that no other lab studies control theory, memory, or agents. It is a claim that **few shipping assistants unify those pieces into one local-first organism with a live exchange-connected body and an honest “done means verified” law.** That unification is the architectural edge: harder to bolt on after the fact, and more valuable than another wrapper around the same frontier API.
+This is not a claim that no other lab studies control theory, memory, or agents. It is a claim that **few shipping assistants unify those pieces into one local-first organism with a live exchange-connected body and an honest “done means verified” law.** That unification is the architectural edge: harder to bolt on after the fact, and more valuable than another thin layer around the same frontier API.
 
 | Upgrade | What it gives Rozi |
 | --- | --- |
@@ -551,19 +540,19 @@ In ordinary chat products, Stop usually means: kill the stream, keep some partia
 3. Conversation continues; Rozi can pick the draft back up, redirect it when the operator adds, revises, or retracts the goal, or settle it when the thread is done.
 4. Tool rounds and async jobs keep running under the same motor refuse / Guardian rules as always.
 
-That is Metabolic Continuity Architecture inventing **on** MECCA: cognition is a stream of Cognitive Events, not a single disposable completion. The operator-visible win is simple — she can get cut off and still finish the thought like a person who was interrupted, not like a process that crashed.
+That is Metabolic Continuity Architecture built **on** MECCA: cognition is a stream of Cognitive Events, not a single disposable completion. The operator-visible win is simple — she can get cut off and still finish the thought like a person who was interrupted, not like a process that crashed.
 
 ### What Rozi Can Do In Real Life
 
 These examples are written for anyone evaluating the system — not only engineers. They describe **kinds of work the organism is built to do**, with honest limits. They are not performance guarantees and not a claim that every scenario is already probe-certified in every environment.
 
-#### 1. “Why aren’t we buying? Are we fat liquid?”
+#### 1. “Why aren’t we buying? Do we have usable liquidity?”
 
 An operator asks in plain English. Rozi is expected to consult capital sustainability truth — liquid cash, reserves, trapped/dust value, runway — and answer from that report’s operator summary, not from vibes. If the account cannot safely open new exposure, she says so with the ranked reason. That is portfolio honesty as a product feature.
 
-#### 2. “Cool.” / “Great.” / “Don’t call me babe all the time.”
+#### 2. Style preferences and standing directives
 
-Style and directive teachings are meant to **stick** as durable operator memory when recorded through the Learning Authority path — then surface when relevant (short closers end the chat cleanly; address preference shapes wording). They are not meant to be pasted into every message. Saying “remember forever” in chat without a durable write is not enough; the architecture treats that gap as a bug class, not a personality quirk.
+Style and directive teachings are meant to **stick** as durable operator memory when recorded through the Learning Authority path — then surface when relevant (for example, short closers that end a chat cleanly, or address preferences that shape wording). They are not meant to be pasted into every message. Saying “remember forever” in chat without a durable write is not enough; the architecture treats that gap as a bug class, not a personality quirk.
 
 #### 3. Coins stuck underwater
 
@@ -583,7 +572,7 @@ Rozi can work through the operator’s real desktop browser session via a local 
 
 #### 7. Text her on Telegram while the desktop is busy
 
-Remote chat shares the interactive tool surface. Long tool loops can show progress; answers can inject to the active session; a blocking question on desktop can escalate to Telegram when configured. The point for an investor: one organism, two doors — not two disconnected bots.
+Remote chat shares the interactive tool surface. Long tool loops can show progress; answers can inject to the active session; a blocking question on desktop can escalate to Telegram when configured. The architectural point: one organism, two doors — not two disconnected bots.
 
 #### 8. Hit Stop mid-answer; continue later
 
@@ -605,7 +594,7 @@ For factual claims about the world, Rozi is expected to use live research tools 
 
 After rapid restarts or odd health signals, Rozi can form a structured concern digest and speak in her own voice when the fingerprint is new — without canned “Everything okay?” scripts and without narrating every quiet boot.
 
-**Investor takeaway from the examples:** the value is not that each vignette is unique in isolation. Many products can send Telegram, call an LLM, or place an order. The value is that **the same first-party substrate** is supposed to govern all of them: authority, verification, settlement, and continuity — with a trading body that makes lying expensive.
+**Takeaway from the examples:** the value is not that each vignette is unique in isolation. Many products can send Telegram, call an LLM, or place an order. The value is that **the same first-party substrate** is supposed to govern all of them: authority, verification, settlement, and continuity — with a trading body that makes false completion expensive.
 
 ### Claim Boundaries
 
@@ -623,7 +612,7 @@ Rozi X MECCA is under active construction. Capability claims must distinguish po
 - Telegram shares the interactive tool surface with desktop chat. Progress during long tools, inject-to-active-session, and cross-channel escalation are implemented substrate; do not claim phone and desktop feel identical in every edge case until those paths are operator-probed on device.
 - Multi-step trading missions (sell→rebuy in one authorized turn) use a substrate mission tool with envelopes; prompt instructions alone are not MECCA. Long-run money-path acceptance remains required before finished autonomous-trader claims.
 - Restart is a proof-carrying capability with marker settlement, detached relaunch, and scheduled-work resumption hooks. It is not a promise that every runtime restart completes cleanly under every failure mode.
-- Natural, spicy, or observant chat language is a presentation layer over grounded context. It may make Rozi feel more intelligent, but it is not allowed to substitute for authority, evidence, verification, or settlement.
+- Natural or observant chat language is a presentation layer over grounded context. It may make Rozi feel more intelligent, but it is not allowed to substitute for authority, evidence, verification, or settlement.
 - Thought drafts are continuity objects, not write warrants. An interrupted thought never authorizes trading, Workspace mutation, or other motor action by itself.
 
 The defensible claim is narrower and stronger: Rozi is a real local-first assistant organism with a **code-backed** control architecture, a live trading body, operator surfaces, growing capability organs, a specialist-harness membrane, continuous cognition with interruptible Thought drafts, durable operator memory under applicable recall, and a discipline that **done means verified against reality** — not narrated — with **remaining proof gates** still open per Claim Boundaries.
@@ -898,13 +887,13 @@ Implemented surface:
 - `infra/config_manager.py` — `image_enrichment.*` behavior defaults (secrets in keyring only)
 - `ui/panels/settings_panel.py` — Image Enrichment APIs settings group (`brave_api_key`, `google_kg_api_key`, `google_service_account_path`)
 - `config/prompt_modules/ref_image_enrichment.txt` — Organ 10 discoverability (required; registry alone is insufficient)
-- canonical implementation spec maintained in proprietary internal documentation
+- canonical implementation spec maintained in private project documentation
 
-**Build pattern:** Organ 10 is the reference template for research-sense capability organs. New organs are delivered through proprietary internal build procedures before any live claim is made.
+**Build pattern:** Organ 10 is the reference template for research-sense capability organs. New organs are delivered through private build procedures before any live claim is made.
 
 Provider footprint:
 
-The exact cloud project, service-account details, key paths, and operator setup are maintained in proprietary operator runbooks. The public architecture claim is limited to the mechanism: separated credentials, Settings/keyring storage, configured providers, and live probes before operational claims.
+The exact cloud project, service-account details, key paths, and operator setup are maintained in private operator documentation. The public architecture claim is limited to the mechanism: separated credentials, Settings/keyring storage, configured providers, and live probes before operational claims.
 
 - **Brave Search API** — public-web image and page discovery
 - **Knowledge Graph Search API** — entity-name match and official entity image when query is entity-like
@@ -971,7 +960,7 @@ Implemented surface:
 | Config | `infra/config_manager.py` — `google_workspace.*` defaults |
 | Settings | `ui/panels/settings_panel.py` — DWD group + Test Connection |
 | Prompts | `config/prompt_modules/ref_google_workspace.txt`, `tool_navigation.txt`, `main_ai_identity.txt` |
-| Operator + pitfalls | Maintained in proprietary operator runbooks; public documentation states architecture and proof boundaries only |
+| Operator + pitfalls | Maintained in private operator documentation; public documentation states architecture and proof boundaries only |
 | Bootstrap | Controlled internal bootstrap scripts (key + config + probe; never leave empty key files) |
 
 Tools (read surface + discovery + gated generic actuator):
@@ -992,7 +981,7 @@ Tools (read surface + discovery + gated generic actuator):
 
 Operational footprint:
 
-The exact Workspace project, account, service-account, client identifier, key location, API enablement set, and scope list are maintained in proprietary operator runbooks. The public architecture claim is limited to the mechanism: fixed configured impersonation, separated credentials, keyring-backed configuration, least-necessary scopes, audit logging, and a live probe before access is claimed operational.
+The exact Workspace project, account, service-account, client identifier, key location, API enablement set, and scope list are maintained in private operator documentation. The public architecture claim is limited to the mechanism: fixed configured impersonation, separated credentials, keyring-backed configuration, least-necessary scopes, audit logging, and a live probe before access is claimed operational.
 
 Organ wiring:
 
@@ -1012,7 +1001,7 @@ Verification evidence:
 
 Write boundary: Gmail send, Calendar create, Drive mutations, Sheets/Docs writes, and other Workspace methods flow through `workspace_call`; availability does not prove mutation. Discovery tools never write. Each mutation still needs the master write warrant / Guardian gates and live proof for the specific mutation before Rozi may claim completion.
 
-**Build pattern:** Organ 11 is the reference template for authenticated external-API capability organs (DWD/auth factory + dedicated TOOL_GROUP + health probe + discovery + universal actuator). Delivery follows proprietary internal build procedures before operational claims are made.
+**Build pattern:** Organ 11 is the reference template for authenticated external-API capability organs (DWD/auth factory + dedicated TOOL_GROUP + health probe + discovery + universal actuator). Delivery follows private build procedures before operational claims are made.
 
 ---
 
@@ -1020,7 +1009,7 @@ Write boundary: Gmail send, Calendar create, Drive mutations, Sheets/Docs writes
 
 Capability organs are settled, gated, auditable limbs for repeatable workflows. They are not the boundary of Rozi's general intelligence, web access, code access, or research access. Rozi can still use general actuators for one-off work; an organ exists when a workflow needs repeatable structure, credentials, substrate gates, outcome envelopes, tests, operator surfaces, and live proof.
 
-A new organ is not considered live because someone wrote code or a tool returned success. It is live only when implementation, operator setup, runtime gates, and domain proof agree. Proprietary internal procedures govern the delivery sequence; the public architecture claim is narrower and stronger: organs are released through a controlled process, and completion requires verified reality rather than narration.
+A new organ is not considered live because someone wrote code or a tool returned success. It is live only when implementation, operator setup, runtime gates, and domain proof agree. Private project procedures govern the delivery sequence; the public architecture claim is narrower and stronger: organs are released through a controlled process, and completion requires verified reality rather than narration.
 
 ---
 
@@ -1084,9 +1073,9 @@ As of the 2026-07-12 documentation refresh, the following public-safe implementa
 | Settlement path | `services/warrant_hooks.py` and `services/reckoner.py` consume verified outcome envelopes for credit/confidence updates. |
 | Subject Image Enrichment (Organ 10) | `services/image_enrichment.py` plus KG/Vision clients; `find_subject_image` / `reveal_ambiguous_gallery` in `memory_market`; ENRICHMENT warrants; `ref_image_enrichment.txt`; focused enrichment tests. |
 | Google Workspace Sense (Organ 11) | `services/google_workspace_*.py` (auth, gates, errors, outcome, audit, gmail, drive, calendar, health, discovery, actuator); tools in `google_workspace` TOOL_GROUP including `list_workspace_methods` / `describe_workspace_method` and gated `workspace_call`; Settings DWD group; prompt discoverability; live DWD / discovery smoke when operator setup is complete. |
-| Remote operator (Telegram + terminal) | `services/telegram_bot.py` (chat UI parity), `services/chat_delivery.py`, `services/operator_escalation.py`, `services/terminal_access.py`; tools `set_terminal_full_access`, `request_operator_input`; progress / session inject / cross-channel escalation substrate; prompt discoverability and proprietary architecture manuals preserve the private operating rules. |
+| Remote operator (Telegram + terminal) | `services/telegram_bot.py` (chat UI parity), `services/chat_delivery.py`, `services/operator_escalation.py`, `services/terminal_access.py`; tools `set_terminal_full_access`, `request_operator_input`; progress / session inject / cross-channel escalation substrate; prompt discoverability and private architecture documentation preserve the private operating rules. |
 | Operator Relay (Organ 12) | `services/telegram_outbound.py`, `services/operator_relay_store.py` (text cycles as intent jobs, label-aware Brier settlement), `services/operator_relay_router.py` + classifier; tool `send_message_to_operator` (+ kernel `settle_relay_cycle`); RELAY_CORRELATION warrants; prompt surfaces. |
-| Cursor Delegation (Organ 13) | `services/cursor_delegation_runner.py` (cursor-agent CLI membrane, worktree-locked builds, never auto-merge), `services/cursor_delegation_store.py` (cycles as intent jobs, DELEGATION_OUTCOME Brier settlement, orphan sweep); tools `delegate_to_cursor_agent` / `get_delegation_status` (+ kernel `settle_cursor_delegation`); autonomous launches gated by `cursor_delegation.autonomous_enabled` Settings toggle; prompt surfaces and proprietary build manuals preserve the private delegation rules. |
+| Cursor Delegation (Organ 13) | `services/cursor_delegation_runner.py` (cursor-agent CLI membrane, worktree-locked builds, never auto-merge), `services/cursor_delegation_store.py` (cycles as intent jobs, DELEGATION_OUTCOME Brier settlement, orphan sweep); tools `delegate_to_cursor_agent` / `get_delegation_status` (+ kernel `settle_cursor_delegation`); autonomous launches gated by `cursor_delegation.autonomous_enabled` Settings toggle; prompt surfaces and private build documentation preserve the private delegation rules. |
 | Cognitive blackboard metabolism | `services/cognitive_blackboard.py`, `services/cognitive_attention.py`; tools `cognitive_blackboard_snapshot` / `enqueue_async_tool_job` (motor refuse); MAIN-narrated interjection on job complete; observation fingerprints with quiet-when-unchanged speak gate; event-bus signals; prompt module `ref_cognitive_metabolism.txt`. |
 | Organism concern metabolism | `services/organism_concern.py`; tool `organism_concern_digest` (structured concerns + fingerprint; log samples as evidence only); `tail_application_log` for category logs shared with the operator Logs surface; boot/restart speak via MAIN narration under the same quiet gate — not canned greeting scripts. Not a numbered capability organ. |
 | Metabolic Continuity (Thought drafts) | Stop / barge-in seals incomplete generation via `seal_thought_draft`; tools `list_thought_drafts` / `redirect_thought_draft` / `settle_thought_draft`; interrupt class recorded; think never mints write authority. Focused blackboard / MCA tests cover seal, barge-in class, and redirect/settle surfaces. Recovery-quality scoring and interrupt credit remain research. |
@@ -1096,8 +1085,8 @@ As of the 2026-07-12 documentation refresh, the following public-safe implementa
 | Browser bridge substrate | `services/browser_bridge*.py`, `services/browser_capabilities.py`, `services/browser_session_coordinator.py`, and `services/browser_session_state.py` provide health, gates, outcomes, capability caching, semantic browser actions, SDE-lite session delta, Settings warrant surfaces, and shared browser-session coordination for configured browser automation. |
 | Restart and boot context | `services/app_restart.py`, startup wiring in `main.py`, and restart-focused tests provide detached relaunch, pre-shutdown handoff state, marker settlement, provider-agnostic MAIN-ready gating, post-boot scheduled-work dispatch, transient startup/restart history, relevance-gated speak, read-only boot context envelopes, and concern-digest fingerprints so visible boot/restart chat is MAIN-narrated from evidence rather than fixed scripts. |
 | Contextual tool narration | `services/tool_status_language.py` and provider tests generate varied, payload-grounded tool progress language without treating narration as authority or completion proof. |
-| Capability organ builder | Proprietary internal build manuals define organ delivery discipline, anti-pattern review, compliance checks, and update workflow; public claims remain limited to architecture and verified capability status. |
-| Documentation contract | Proprietary internal documentation preserves the detailed reconciliation formula, operator runbooks, organ specs, and implementation manuals; this official document preserves the public architecture, investor brief, real-life capability examples, and claim boundaries. |
+| Capability organ builder | Private project build manuals define organ delivery discipline, anti-pattern review, compliance checks, and update workflow; public claims remain limited to architecture and verified capability status. |
+| Documentation contract | Private project documentation preserves detailed reconciliation formula, operator runbooks, organ specs, and implementation manuals; this official document preserves the public architecture, real-life capability examples, and claim boundaries. |
 
 Verification evidence:
 
@@ -1231,7 +1220,7 @@ The defensible novelty is in the composition:
 7. Guardian/capability boundaries prevent text from minting dangerous authority.
 8. The whole system is designed to be local-first and portable across bodies.
 9. Interrupted cognition is finalized as Thought drafts on a shared blackboard — continuity without motor authority from the draft.
-10. The framework (MECCA workflows) is the product moat; the language model is a swappable brain inside that metabolism.
+10. The framework (MECCA workflows) is the durable product property; the language model is a swappable brain inside that metabolism.
 11. Durable operator memory uses Learning Authority with applicable recall — first-party preference/directive persistence without dump-all prompt stuffing.
 12. First-party motors (trading body, live browser under warrant, Workspace, Telegram, specialist harness) share one verification and settlement law rather than living as unrelated plugins.
 
@@ -1260,7 +1249,7 @@ Safe claims:
 - Phase 9 implemented verified desired-state reconciliation for scheduled intent.
 - Subject Image Enrichment is implemented as Organ 10 — a read-only research-sense capability organ with structured found/ambiguous/not_found outcomes.
 - Google Workspace Sense is implemented as Organ 11 — DWD reads for everyday Gmail/Drive/Calendar, discovery catalog tools so method paths are browsed rather than invented, and a gated universal `workspace_call` actuator for scoped Google services that still requires the master write warrant, Guardian authorization, idempotency, and live proof before any specific mutation may be claimed complete.
-- Proprietary organ-delivery procedures define how **new organs** integrate without breaking Mecca compliance — they do **not** cap Rozi to organ tools only; general web actuators (curl/shell, Perplexity, authenticated browser bridges) remain first-class.
+- Private organ-delivery procedures define how **new organs** integrate without breaking Mecca compliance — they do **not** cap Rozi to organ tools only; general web actuators (curl/shell, Perplexity, authenticated browser bridges) remain first-class.
 - The architecture blocks a known false-success class.
 - Kryptonite is the first major body of Rozi X MECCA.
 - The novelty is a synthesis and unification, not isolated invention of each component.
@@ -1364,26 +1353,12 @@ Ingest PDF/EPUB (and similar) into chunked, embedded, provenance-bearing knowled
 
 ---
 
-## Near-Term Implementation Gates
-
-1. Live smoke Universal Predicate-Gated Reconciliation in the running app with a low-risk scheduled intent.
-2. Confirm `list_scheduled_tasks` exposes linked intent-job evidence.
-3. Prove the scheduled task completes only after verifier truth.
-4. Run a guarded trading-read verification before any live write proof.
-5. Add todo/task domain verification as the first non-trading assistant module.
-6. Add explicit `schedule_intent` tool naming once compatibility pressure is gone.
-7. Expand outcome settlement reporting in the UI/log surface.
-8. Add a developer-facing verifier registry reference.
-9. Live chat smoke: Organ 11 `gmail_search_messages` / discovery browse in a user session with organ enabled and warrant policy confirmed.
-10. Organ 11 write path: keep proving specific mutations under master write warrant + Guardian + live domain proof (send / calendar create / Drive media / Sheets) — discovery catalog is shipped; false-success on `ok` alone remains forbidden.
-
----
 
 ## Executive Summary
 
 Rozi X MECCA is a developing local-first cognitive substrate for autonomous assistant organisms. Its core insight is that autonomy cannot be trusted until actions, memories, and authority are settled against verified reality. Kryptonite supplied the first real body and the real-world failures that forced this architecture into existence. MECCA supplies the contract-cognition substrate. Rozi X is the organism that grows on top of it.
 
-For investors, the near-term moat is not one model and not one trading strategy. It is a **first-party framework** — metabolic workflows owned by the organism:
+The durable product property is not one model and not one trading strategy. It is a **first-party framework** — metabolic workflows owned by the organism:
 
 - language intent becomes desired-state truth,
 - tools become actuators,
@@ -1395,7 +1370,7 @@ For investors, the near-term moat is not one model and not one trading strategy.
 - operator preferences stick through Learning Authority with applicable recall,
 - desktop, Telegram, Workspace, browser motor, and specialist coding share one control plane.
 
-Swap the brain; keep the metabolism. That is what turns a capable AI into a disciplined organism under substrate law — and why a wrapper around tomorrow’s frontier API is not the same product.
+Swap the brain; keep the metabolism. That is what turns a capable AI into a disciplined organism under substrate law — and why a thin layer around tomorrow’s frontier API is not the same product.
 
 ---
 
@@ -1407,7 +1382,7 @@ The organism is not complete, but the foundation is no longer only theoretical. 
 
 The next stage is to expand the body without lying about resources: more verifiers, more domains, specialist harness membranes (Claude Code / IDE) beside Cursor, Research Quest and book-knowledge ingest, recovery-quality credit for interrupted cognition, stronger settlement, stronger Guardian coverage, live smoke and browser probe evidence, and eventually a portable genome that lets Rozi X remain itself across tools, apps, and machines.
 
-For diligence readers: start with the **Investor Brief** and **What Rozi Can Do In Real Life**, then pressure-test every claim against **Claim Boundaries** and **Implemented Evidence**. Architecture that admits its proof gates is stronger than marketing that pretends they do not exist.
+Readers evaluating the system should start with **What Rozi Can Do In Real Life**, then pressure-test every claim against **Claim Boundaries** and **Implemented Evidence**. Architecture that admits its proof gates is stronger than marketing that pretends they do not exist.
 
 ---
 
@@ -1442,9 +1417,6 @@ Rozi X MECCA is therefore not a repackaged library, borrowed framework, or impor
 
 ---
 
-**CONFIDENTIAL AND PROPRIETARY**
-**This document contains confidential and proprietary architecture information. Distribution is controlled by Cosa Bora Design Studios.**
-
-**Document Version:** 0.4.1
-**Last Updated:** 2026-07-11
+**Document Version:** 0.4.3
+**Last Updated:** 2026-07-14
 **Document Scope:** Official Rozi X MECCA architecture overview and capability presentation, covering Organs 10–13, cognitive blackboard metabolism (including organism concern awareness and sense≠speak), specialist harness membrane (Cursor live; Claude Code / VS Code as integration targets), universal scheduled intent, verified reconciliation, research/book-ingest agenda, Workspace and Telegram surfaces, contextual boot recovery, and dynamic tool narration within public claim boundaries and resource-honest parallelism.

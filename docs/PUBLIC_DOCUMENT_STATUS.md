@@ -8,6 +8,10 @@
 
 **How to use it:** Read it as orientation and evidence-backed overview. Later sections carry the substance. Where work is still in progress, this document says so rather than overselling.
 
-**Honest frame:** Rozi X MECCA is a serious local-first cognitive architecture under active construction. It should not be read as finished AGI, a sentient being, a certified safety framework, a guaranteed trading system, or a completed autonomous enterprise product.
+**MECCA non-substitution law:** no implementation may substitute prompt instructions, model judgment, tool success, scheduler dispatch, idempotency replay, cached state, hardcoded tool-name lists, or internal state-machine flags for substrate truth. Substrate truth requires the active intent, current authority, declared constraints, actuator result, domain verifier, Universal Outcome Envelope, and settlement path to agree. If one of those parts is missing, the feature is partial, not MECCA-complete.
 
-**Last public refresh:** 2026-07-12.
+**Honest frame:** Rozi X MECCA is a serious local-first cognitive architecture under active construction. It should not be read as finished AGI, a sentient being, a certified safety framework, a guaranteed trading system, a completed autonomous enterprise product, or a proven first-ever scientific discovery.
+
+**Scope note:** Detailed implementation workflows, builder checklists, and operator runbooks are maintained privately. This public document covers architecture, current capabilities, public-safe evidence, and claim boundaries.
+
+**Last public refresh:** 2026-07-14.
