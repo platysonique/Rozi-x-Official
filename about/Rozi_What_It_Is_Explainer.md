@@ -10,6 +10,8 @@
 
 That law was forged on live trading stakes, where a fake “done” costs real money. The same discipline is being extended to mail, calendar, research, and browsing — with honest proof gates still expanding. Rozi is a development-stage organism. The core is the verification law, not a finished utopia.
 
+**The method, in one sentence:** a single-LLM control architecture in which an agent’s completion assertion is non-authoritative; completion is gated by independently observable, task-specific environment predicates and preserved evidence receipts.
+
 ---
 
 ## Why she exists
