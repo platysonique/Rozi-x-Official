@@ -53,13 +53,25 @@
         text-decoration: none;
       }
       .site-nav-float a:hover { text-decoration: underline; }
-      .site-credit a {
-        color: #3dfff3;
-        text-decoration: none;
-        pointer-events: auto;
+      .site-credit {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 0.75rem;
+        z-index: 30;
+        margin: 0;
+        max-width: min(92%, 36rem);
+        color: #7a8aa6;
+        font: 0.78rem/1.45 "IBM Plex Sans", system-ui, sans-serif;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+        pointer-events: none;
       }
-      .site-credit { pointer-events: none; }
-      .site-credit a { pointer-events: auto; }
+      .eyebrow-spacer {
+        margin: 0 0 0.35rem;
+        min-height: 1.1em;
+        visibility: hidden;
+      }
+      #viewport { position: relative; }
       @media (min-width: 901px) {
         .site-nav-float { display: none; }
       }
@@ -88,7 +100,7 @@
               <a href="../about/me/">About Me</a>
               <a href="../why/">Why it matters</a>
             </nav>
-            <p class="eyebrow">Rozi X MECCA · <a href="../about/me/" style="color:inherit">Adonis Carcamo</a></p>
+            <p class="eyebrow eyebrow-spacer" aria-hidden="true">&nbsp;</p>
             <h1>Architecture Voyage</h1>
             <p class="lede">
               The organism is already concurrent before you press anything.
@@ -134,6 +146,9 @@
           </p>
           <p id="explainer-step" class="explainer-step" hidden></p>
         </aside>
+        <p class="site-credit">
+          © 2026 Adonis Carcamo · Founder, Creator &amp; Visioneer · Platysonique / Rozi X
+        </p>
       </div>
       <div id="node-tooltip" hidden></div>
 
@@ -143,11 +158,6 @@
       <a href="../about/me/">About Me</a>
       <a href="../why/">Why it matters</a>
     </nav>
-
-    <p class="site-credit" style="position:fixed;left:1rem;bottom:0.75rem;z-index:40;margin:0;max-width:min(92vw,28rem);color:#7a8aa6;font:0.78rem/1.45 'IBM Plex Sans',system-ui,sans-serif;text-shadow:0 1px 8px rgba(0,0,0,.7)">
-      © 2026 Adonis Carcamo · Founder, Creator &amp; Visioneer · Platysonique / Rozi X ·
-      <a href="../">Home</a>
-    </p>
     </div>
   </body>
 </html>
