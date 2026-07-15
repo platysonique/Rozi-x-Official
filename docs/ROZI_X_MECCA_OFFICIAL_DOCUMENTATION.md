@@ -1,12 +1,11 @@
-# Rozi X MECCA Official Documentation
+# Rozi X MECCA — Official Architecture Document
 
-**Status:** Not published on the public site.
+**Status:** Full technical architecture is **withheld from this public repository** pending intellectual-property review.
 
-Detailed architecture documentation is withheld pending intellectual-property review.
-Public Pages materials stay at the capability and principle level.
-
-See:
+Public-safe materials:
 
 - [What Rozi Is](../about/)
-- [Architecture Voyage](../voyage/)
-- [Docs notice page](./index.html)
+- [Why it matters in 2026](../why/)
+- [Architecture Voyage](../voyage/) — includes the **Operator · Rozi · External** authority picture
+
+The living offline official document remains in the private product tree and is updated there first.

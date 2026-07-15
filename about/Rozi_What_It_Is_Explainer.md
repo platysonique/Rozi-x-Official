@@ -47,6 +47,7 @@ Think of Rozi as a **digital operator’s desk** with a conscience.
 - Mail and calendar that don’t claim “sent” or “scheduled” until the account shows it.
 - Research that cites what it found instead of inventing closure.
 - Browser work under warrants — act only with permission and settle only with evidence.
+- Talking to more than one human without mixing their voices — desk **Send-as**, person notes, and an **External** door that figures out who is speaking before tone loads.
 
 She is not AGI. She does not guarantee returns. She is not a finished product you turn loose and forget. She is an organism whose first organ grew under financial consequence, and whose other limbs are learning the same law.
 
