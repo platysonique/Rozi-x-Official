@@ -2,7 +2,7 @@
 
 AI agents that report a task “done” when the real world shows otherwise — false success — is an actively researched reliability problem. Major labs and venues are publishing on verification, monitors, and behavioral contracts. Much of that work validates in simulations and treats verification as a bolt-on guardrail.
 
-**Rozi X is different:** verified-against-reality action is the operating metabolism of the whole assistant — not a wrapper on a chat model. Completion claims require domain truth, not tool applause. That law was forged on a live, financially consequential trading workstation and extends to operator workflows (mail, calendar, research, browser under warrant) with **remaining proof gates** still open.
+**Rozi X is different:** verified-against-reality action is the operating metabolism of the whole assistant — not a wrapper on a chat model. Completion claims require domain truth, not tool applause. That law was forged on a live, financially consequential trading workstation and extends to operator workflows (mail, calendar, research, browser under bridge automation enablement and verification (hard-page proof still open)) with **remaining proof gates** still open.
 
 **Public differentiators (honest):**
 
