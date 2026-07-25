@@ -1,4 +1,4 @@
-> Copyright © 2026 Platysonique (LLC formation pending; all rights held by the founder pending assignment) — all rights reserved. Public visibility is for serving the site only; no license is granted. See [LICENSE](LICENSE). *(TODO(operator): finalize holder post-formation)*
+> Copyright © 2026 Adonis Carcamo — all rights reserved. Public visibility is for serving the site only; no license is granted. See [LICENSE](LICENSE). *(TODO(operator): reassign to Platysonique LLC at formation)*
 
 # Rozi-x-Official
 
