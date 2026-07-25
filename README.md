@@ -1,4 +1,4 @@
-> Copyright © 2026 Platysonique — all rights reserved. Public visibility is for serving the site only; no license is granted. See [LICENSE](LICENSE). *(holder is a placeholder — TODO(operator): confirm legal holder)*
+> Copyright © 2026 Platysonique (LLC formation pending; all rights held by the founder pending assignment) — all rights reserved. Public visibility is for serving the site only; no license is granted. See [LICENSE](LICENSE). *(TODO(operator): finalize holder post-formation)*
 
 # Rozi-x-Official
 

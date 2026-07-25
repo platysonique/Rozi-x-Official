@@ -1,9 +1,11 @@
 Rozi-x-Official (public site) — All Rights Reserved
-Copyright © 2026 Platysonique. All Rights Reserved.
+Copyright © 2026 Platysonique (LLC formation pending; all rights held
+by the founder pending assignment). All Rights Reserved.
 
-TODO(operator): confirm legal holder — "Platysonique" is a PLACEHOLDER; the
-legal name (personal / Cosa Bora / new entity) is pending operator + attorney
-review. A later one-commit sweep will finalize the holder across all repos.
+TODO(operator): finalize holder post-formation — "Cosa Bora Design Studios"
+(umbrella LLC) and "Platysonique" (software LLC) are planned but not yet
+formed; until formation the copyright vests in the founder personally by
+operation of law. A one-commit sweep will finalize the holder after formation.
 
 This repository publishes the public Rozi X site. Although the repository is
 publicly visible so the site can be served, its contents are NOT open source
