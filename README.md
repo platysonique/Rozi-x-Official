@@ -1,3 +1,5 @@
+> Copyright © 2026 Platysonique — all rights reserved. Public visibility is for serving the site only; no license is granted. See [LICENSE](LICENSE). *(holder is a placeholder — TODO(operator): confirm legal holder)*
+
 # Rozi-x-Official
 
 Public Platysonique site for **Rozi X**.
